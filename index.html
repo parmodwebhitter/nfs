@@ -6,13 +6,16 @@
   <title>Momentra — Growth Marketing Studio</title>
   <meta name="description" content="Momentra is a performance-first digital marketing studio. SEO, paid media, social, content and CRO that compound into revenue." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  
+  
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/fixes.css" />
+  <link rel="stylesheet" href="css/content.css" />
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- ================= SVG ICON SPRITE ================= -->
@@ -41,6 +44,13 @@
       <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4h4.5l4 5.6L17 4h3l-6.1 7.3L20.5 20H16l-4.3-6-5 6H3.6l6.6-7.9z" fill="currentColor"/></symbol>
       <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15.1V8.9l5.2 3.1z" fill="currentColor"/></symbol>
       <symbol id="i-google" viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z" fill="#4285F4"/><path d="M12 22c2.7 0 5-.9 6.6-2.5l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" fill="#34A853"/><path d="M6.4 13.9a6 6 0 0 1 0-3.8V7.5H3.1a10 10 0 0 0 0 9z" fill="#FBBC05"/><path d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6z" fill="#EA4335"/></symbol>
+      <symbol id="i-health" viewBox="0 0 24 24"><path d="M12 21s-8-4.8-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.2-8 11-8 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 12h3l1.5-3 2 6 1.5-3h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="i-edu" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 11v5c3 3 9 3 12 0v-5M22 9v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10 14 3 11l1-2 8 1 5-5c1-1 3-1 3 0s0 2-1 3l-5 5 1 8-2 1-3-7-4 4v3H5l-1-3-3-1v-1h3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5H3zM5 9v8M9.7 9v8M14.3 9v8M19 9v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-food" viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 21V3c-2.5 1-4 4-4 8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.5-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
       <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2c.6 4.8 2.7 7 7.5 7.5v1C14.7 11 12.6 13.2 12 18h-1c-.5-4.8-2.7-7-7.5-7.5v-1C8.3 9 10.5 6.8 11 2z" fill="currentColor"/></symbol>
     </defs>
   </svg>
@@ -61,7 +71,7 @@
       </nav>
       <div class="header__cta">
         <a href="tel:+10000000000" class="header__phone"><svg><use href="#i-phone"/></svg> Talk to a strategist</a>
-        <a href="#contact" class="btn btn--dark magnetic">Get a free audit <svg><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="btn btn--dark">Get a free audit <svg><use href="#i-arrow"/></svg></a>
       </div>
       <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     </div>
@@ -76,93 +86,65 @@
   </header>
 
   <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="blob blob--1"></div>
-        <div class="blob blob--2"></div>
-        <div class="grid-lines"></div>
-      </div>
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="pill reveal"><span class="pill__dot"></span> Now booking Q1 growth sprints</p>
-          <h1 class="hero__title reveal" data-delay="1">
-            Marketing that<br />
-            <span class="rotator" aria-live="polite">
-              <span class="rotator__word is-active">compounds.</span>
-              <span class="rotator__word">converts.</span>
-              <span class="rotator__word">scales.</span>
-              <span class="rotator__word">pays back.</span>
-            </span>
-          </h1>
-          <p class="hero__lead reveal" data-delay="2">
-            Momentra is a performance studio for ambitious brands. We plug search, paid media, social and content into one revenue engine — and show you every rupee and dollar it returns.
-          </p>
-          <div class="hero__actions reveal" data-delay="3">
-            <a href="#contact" class="btn btn--lime btn--lg magnetic">Book a strategy call <svg><use href="#i-arrow"/></svg></a>
-            <a href="#work" class="btn btn--ghost btn--lg"><span class="play"><svg><use href="#i-play"/></svg></span> See results</a>
-          </div>
-          <div class="hero__trust reveal" data-delay="4">
-            <div class="avatars">
-              <span style="--h:12">AR</span><span style="--h:200">JL</span><span style="--h:330">SK</span><span style="--h:150">MD</span>
-            </div>
-            <div>
-              <div class="stars" aria-label="4.9 out of 5 stars">
-                <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
-                <strong>4.9</strong>
+    <!-- ================= HERO: 3-SLIDE BANNER ================= -->
+    <section class="hero hero-slider" aria-roledescription="carousel" aria-label="Highlights">
+      <div class="hs">
+        <article class="hs__slide is-active" aria-label="Slide 1 of 3">
+          <div class="container hs__inner">
+            <div class="hs__copy">
+              <p class="pill"><span class="pill__dot"></span> SEO &amp; AI search</p>
+              <h1 class="hs__title">Rank higher.<br/><em>Get found first.</em></h1>
+              <p class="hs__lead">Technical SEO, content and AI-search optimisation that put your brand at the top of Google, ChatGPT and every search your buyers make.</p>
+              <div class="hero__actions">
+                <a href="#contact" class="btn btn--lime btn--lg">Get a free SEO audit <svg><use href="#i-arrow"/></svg></a>
+                <a href="#services" class="btn btn--ghost btn--lg">Explore services</a>
               </div>
-              <small>from 420+ verified client reviews</small>
             </div>
+            <div class="hs__art"><img src="assets/banners/banner-1.svg" alt="Illustration of a laptop showing rising search rankings" /></div>
           </div>
-        </div>
+        </article>
 
-        <div class="hero__visual reveal" data-delay="2" aria-hidden="true">
-          <div class="dash tilt">
-            <div class="dash__head">
-              <span class="dots"><i></i><i></i><i></i></span>
-              <span>Growth dashboard · Live</span>
-              <span class="live"><i></i> Live</span>
+        <article class="hs__slide" aria-label="Slide 2 of 3">
+          <div class="container hs__inner">
+            <div class="hs__copy">
+              <p class="pill"><span class="pill__dot"></span> Social media &amp; creators</p>
+              <h2 class="hs__title">Turn followers<br/><em>into customers.</em></h2>
+              <p class="hs__lead">Scroll-stopping content, creator partnerships and community management that grow an audience you can actually sell to.</p>
+              <div class="hero__actions">
+                <a href="#contact" class="btn btn--lime btn--lg">Plan my social strategy <svg><use href="#i-arrow"/></svg></a>
+                <a href="#work" class="btn btn--ghost btn--lg">See results</a>
+              </div>
             </div>
-            <div class="dash__kpis">
-              <div><small>Revenue</small><strong data-count="284" data-prefix="$" data-suffix="k">$0k</strong><em class="up">+38%</em></div>
-              <div><small>ROAS</small><strong data-count="6.4" data-decimals="1" data-suffix="x">0x</strong><em class="up">+1.9</em></div>
-              <div><small>CAC</small><strong data-count="21" data-prefix="$">$0</strong><em class="down">-27%</em></div>
-            </div>
-            <svg class="dash__chart" viewBox="0 0 400 160" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0" stop-color="#c6ff3d" stop-opacity=".45"/>
-                  <stop offset="1" stop-color="#c6ff3d" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g class="dash__gridlines"><path d="M0 40h400M0 80h400M0 120h400"/></g>
-              <path class="chart-area" d="M0 140 C40 130 60 120 90 118 S150 96 180 100 240 70 270 64 330 40 360 30 400 14 400 14 V160 H0Z" fill="url(#chartFill)"/>
-              <path class="chart-line" d="M0 140 C40 130 60 120 90 118 S150 96 180 100 240 70 270 64 330 40 360 30 400 14" fill="none" stroke="#c6ff3d" stroke-width="3" stroke-linecap="round"/>
-              <path class="chart-line chart-line--2" d="M0 150 C50 146 80 140 110 140 S170 130 200 128 260 118 290 114 350 100 400 92" fill="none" stroke="#ff5b3a" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
-              <circle class="chart-dot" cx="400" cy="14" r="5" fill="#c6ff3d"/>
-            </svg>
-            <div class="dash__channels">
-              <div><span>Organic search</span><div class="bar"><i style="--w:82%"></i></div><b>82%</b></div>
-              <div><span>Paid social</span><div class="bar"><i style="--w:64%"></i></div><b>64%</b></div>
-              <div><span>Email &amp; CRM</span><div class="bar"><i style="--w:47%"></i></div><b>47%</b></div>
-            </div>
+            <div class="hs__art"><img src="assets/banners/banner-2.svg" alt="Illustration of a phone feed with likes and a megaphone" /></div>
           </div>
+        </article>
 
-          <div class="float-card float-card--a">
-            <span class="ic ic--lime"><svg><use href="#i-search"/></svg></span>
-            <div><small>Keywords on page 1</small><strong>1,284</strong></div>
+        <article class="hs__slide" aria-label="Slide 3 of 3">
+          <div class="container hs__inner">
+            <div class="hs__copy">
+              <p class="pill"><span class="pill__dot"></span> Performance marketing</p>
+              <h2 class="hs__title">Every rupee,<br/><em>working harder.</em></h2>
+              <p class="hs__lead">Google, Meta and LinkedIn campaigns built around profit — tested weekly, reported transparently, scaled only when they pay back.</p>
+              <div class="hero__actions">
+                <a href="#contact" class="btn btn--lime btn--lg">Launch my campaign <svg><use href="#i-arrow"/></svg></a>
+                <a href="#process" class="btn btn--ghost btn--lg">How we work</a>
+              </div>
+            </div>
+            <div class="hs__art"><img src="assets/banners/banner-3.svg" alt="Illustration of a rocket launching from a target" /></div>
           </div>
-          <div class="float-card float-card--b">
-            <span class="ic ic--coral"><svg><use href="#i-target"/></svg></span>
-            <div><small>New qualified leads</small><strong>+312 this month</strong></div>
-          </div>
-          <div class="float-card float-card--c">
-            <svg class="g"><use href="#i-google"/></svg>
-            <div><small>Google Partner</small><strong>Premier 2026</strong></div>
-          </div>
-          <svg class="orbit" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-dasharray="2 8"/></svg>
-        </div>
+        </article>
       </div>
+
+      <div class="container hs__controls">
+        <div class="hs__dots" role="tablist">
+          <button class="on" aria-label="Show slide 1"><i></i></button>
+          <button aria-label="Show slide 2"><i></i></button>
+          <button aria-label="Show slide 3"><i></i></button>
+        </div>
+        <div class="hs__count"><b>01</b> / 03</div>
+      </div>
+      <button class="hs__side hs__side--prev" data-hs="-1" aria-label="Previous slide"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
+      <button class="hs__side hs__side--next" data-hs="1" aria-label="Next slide"><svg><use href="#i-arrow"/></svg></button>
     </section>
 
     <!-- ================= LOGO MARQUEE ================= -->
@@ -183,6 +165,112 @@
         </div>
       </div>
     </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about">
+      <div class="container about__inner">
+        <div class="about__media reveal flip-up">
+          <img class="about__img" src="assets/img/about-team.svg" alt="Illustration of the Momentra team planning a campaign around a growth dashboard" />
+          <div class="about__badge">
+          <div class="flipcard">
+            <div class="flipcard__face">
+              <strong data-count="100" data-suffix="+">0</strong>
+              <span>Trusted partners</span>
+            </div>
+            <div class="flipcard__face flipcard__back">
+              <strong>14</strong>
+              <span>Countries served</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div>
+          <span class="eyebrow reveal">Who we are</span>
+          <h2 class="reveal" data-delay="1">A full-suite agency that treats your growth like its own.</h2>
+          <p class="reveal" data-delay="2">Momentra brings search, social, paid media and creative under one roof. Instead of juggling five vendors, you get one accountable team focused on a single outcome: turning your brand into a dependable sales engine.</p>
+          <p class="reveal" data-delay="3">We start by understanding your market, your margins and your customers — then build a plan that compounds month after month, with reporting you can read in two minutes.</p>
+          <a href="#contact" class="btn btn--dark reveal" data-delay="4">More about us <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLAN (flip cards) ================= -->
+    <section class="plan">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">What we do</span>
+            <h2 class="reveal" data-delay="1">Great marketing starts<br/>with a great plan.</h2>
+          </div>
+          <p class="reveal" data-delay="2">Hover a card to see how each step shapes your campaign. Nothing launches until these five boxes are ticked.</p>
+        </div>
+        <div class="plan__grid">
+          <div class="flip reveal flip-up"><div class="flipcard">
+            <div class="flipcard__face"><span class="ic ic--lime"><svg><use href="#i-mail"/></svg></span><b>01</b><h3>Clear communication</h3></div>
+            <div class="flipcard__face flipcard__back"><h3>Clear communication</h3><p>A dedicated lead, a shared channel and weekly check-ins. You always know what's happening and why.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
+            <div class="flipcard__face"><span class="ic ic--lime"><svg><use href="#i-target"/></svg></span><b>02</b><h3>Campaign goals</h3></div>
+            <div class="flipcard__face flipcard__back"><h3>Campaign goals</h3><p>We agree on the numbers that matter — leads, sales, CAC — before a single rupee is spent.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
+            <div class="flipcard__face"><span class="ic ic--lime"><svg><use href="#i-search"/></svg></span><b>03</b><h3>Market research</h3></div>
+            <div class="flipcard__face flipcard__back"><h3>Market research</h3><p>Competitor teardown, keyword gaps and demand trends that show where the easy wins are hiding.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
+            <div class="flipcard__face"><span class="ic ic--lime"><svg><use href="#i-share"/></svg></span><b>04</b><h3>Audience mapping</h3></div>
+            <div class="flipcard__face flipcard__back"><h3>Audience mapping</h3><p>Personas built from real data, so every ad and post speaks to someone who's ready to buy.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="4"><div class="flipcard">
+            <div class="flipcard__face"><span class="ic ic--lime"><svg><use href="#i-sparkle"/></svg></span><b>05</b><h3>Tailored strategy</h3></div>
+            <div class="flipcard__face flipcard__back"><h3>Tailored strategy</h3><p>A channel mix designed for your business — never a template recycled from the last client.</p></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXECUTION + PARTNERS ================= -->
+    <section class="exec">
+      <div class="container exec__inner">
+        <div class="exec__media reveal flip">
+          <img src="assets/img/exec-strategy.svg" alt="Illustration of a campaign board moving ideas from planning to live, with leads up 184%" />
+        </div>
+        <div>
+          <span class="eyebrow reveal">Why choose us</span>
+          <h2 class="reveal" data-delay="1">From big ideas to flawless execution.</h2>
+          <p class="reveal" data-delay="2">Strategy is only as good as the team that ships it. Our specialists plan creatively and execute with discipline — then keep refining, so results get better every month instead of plateauing.</p>
+          <ul class="exec__list">
+            <li class="reveal flip-up"><span><svg><use href="#i-check"/></svg></span><div><b>Senior specialists only</b><p>Every account is run by people with 5+ years in their channel — no interns learning on your budget.</p></div></li>
+            <li class="reveal flip-up" data-delay="1"><span><svg><use href="#i-check"/></svg></span><div><b>Weekly sprints, monthly reviews</b><p>Small improvements ship every week. Every month we sit down and decide what to scale, fix or cut.</p></div></li>
+            <li class="reveal flip-up" data-delay="2"><span><svg><use href="#i-check"/></svg></span><div><b>One live dashboard</b><p>Spend, leads and revenue from every channel in one place, updated daily and readable in two minutes.</p></div></li>
+            <li class="reveal flip-up" data-delay="3"><span><svg><use href="#i-check"/></svg></span><div><b>No long lock-ins</b><p>After the first 90 days, you stay because it's working — not because a contract says so.</p></div></li>
+          </ul>
+          <a href="#contact" class="btn btn--lime reveal" data-delay="3">Talk to our team <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="container exec__partners">
+        <p class="exec__partners-title reveal">Certified and trusted by the platforms we work on</p>
+        <div class="partners">
+          <div class="flip reveal flip-up"><div class="flipcard">
+            <div class="flipcard__face"><svg class="partner__logo"><use href="#i-google"/></svg><h3>Google Partner</h3><small>Search · Shopping · YouTube</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Certified team</h3><p>Ads specialists certified across Search, Display and Performance Max.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
+            <div class="flipcard__face"><span class="partner__mark" style="--t:#95BF47">S</span><h3>Shopify Partner</h3><small>Stores · Feeds · Apps</small></div>
+            <div class="flipcard__face flipcard__back"><h3>E-commerce ready</h3><p>Store builds, feed management and retention flows that lift order value.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
+            <div class="flipcard__face"><span class="partner__mark" style="--t:#0866FF">M</span><h3>Meta Business Partner</h3><small>Facebook · Instagram</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Social at scale</h3><p>Advantage+ campaigns and creative testing frameworks that keep CPAs down.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
+            <div class="flipcard__face"><span class="partner__mark" style="--t:#FF7A59">Hs</span><h3>HubSpot Partner</h3><small>CRM · Automation</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Closed-loop reporting</h3><p>Every lead tracked from first click to closed deal, so you know what really works.</p></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- ================= INTRO / MANIFESTO ================= -->
     <section class="manifesto">
@@ -280,6 +368,56 @@
       </div>
     </section>
 
+    <!-- ================= FEATURE ROWS ================= -->
+    <section class="features">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__media reveal flip"><img src="assets/img/feat-content.svg" alt="Illustration of a content studio with video, article and camera" /></div>
+          <div class="feature__copy">
+            <span class="eyebrow reveal">Content &amp; brand</span>
+            <h2 class="reveal" data-delay="1">Content people actually want to read, watch and share.</h2>
+            <p class="reveal" data-delay="2">Great content does two jobs: it earns attention and it builds trust before your sales team ever picks up the phone. Our in-house writers, designers and video editors create blogs, reels, case studies and ad creatives in your brand voice — planned around what your buyers are searching for.</p>
+            <ul class="ticks reveal" data-delay="3">
+              <li>Monthly content calendar mapped to search demand</li>
+              <li>Short-form video and reels edited in-house</li>
+              <li>Long-form guides that rank and get cited by AI search</li>
+              <li>Brand guidelines so every post looks and sounds like you</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature feature--rev">
+          <div class="feature__media reveal flip"><img src="assets/img/feat-analytics.svg" alt="Illustration of an analytics dashboard with conversion and A/B test results" /></div>
+          <div class="feature__copy">
+            <span class="eyebrow reveal">Analytics &amp; CRO</span>
+            <h2 class="reveal" data-delay="1">Know exactly which rupee brought which customer.</h2>
+            <p class="reveal" data-delay="2">Most businesses lose 20–40% of their conversion data to broken tracking. We set up GA4, server-side tagging and CRM integration properly — then run structured A/B tests on your landing pages so the same traffic produces more leads and sales.</p>
+            <div class="minis reveal" data-delay="3">
+              <div><strong data-count="31" data-prefix="+" data-suffix="%">0</strong><span>Average lift in conversion rate</span></div>
+              <div><strong data-count="42">0</strong><span>Experiments run per quarter</span></div>
+              <div><strong data-count="100" data-suffix="%">0</strong><span>Leads tracked to source</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature__media reveal flip"><img src="assets/img/feat-web.svg" alt="Illustration of a fast website on desktop and mobile with a 98 speed score" /></div>
+          <div class="feature__copy">
+            <span class="eyebrow reveal">Web design &amp; development</span>
+            <h2 class="reveal" data-delay="1">Websites that load fast, rank well and sell.</h2>
+            <p class="reveal" data-delay="2">Your website is your best salesperson — it works 24/7. We design and build fast, mobile-first websites and landing pages with clear messaging, strong calls to action and SEO built in from day one, on WordPress, Shopify or custom code.</p>
+            <ul class="ticks reveal" data-delay="3">
+              <li>90+ PageSpeed scores on mobile and desktop</li>
+              <li>Conversion-focused layouts tested on real users</li>
+              <li>SEO-ready structure, schema and Core Web Vitals</li>
+              <li>Easy-to-edit CMS so your team can update content</li>
+            </ul>
+            <a href="#contact" class="btn btn--dark reveal" data-delay="4">Start your project <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= STATS BAND ================= -->
     <section class="stats">
       <div class="container stats__grid">
@@ -302,19 +440,19 @@
         <ol class="steps">
           <li class="step reveal">
             <span class="step__num">01</span>
-            <div><h3>Deep-dive audit</h3><p>We tear down your site, ads, analytics and competitors to find the fastest wins and the biggest leaks.</p><span class="step__time">Week 1–2</span></div>
+            <div><h3>Deep-dive audit</h3><p>We tear down your site, ads, analytics and competitors to find the fastest wins and the biggest leaks.</p><ul class="step__list"><li>Technical SEO &amp; site speed audit</li><li>Ad account &amp; tracking review</li><li>Competitor &amp; keyword gap report</li></ul><span class="step__time">Week 1–2</span></div>
           </li>
           <li class="step reveal">
             <span class="step__num">02</span>
-            <div><h3>Growth blueprint</h3><p>A channel-by-channel roadmap with forecasted impact, budget split and KPIs you sign off on.</p><span class="step__time">Week 3</span></div>
+            <div><h3>Growth blueprint</h3><p>A channel-by-channel roadmap with forecasted impact, budget split and KPIs you sign off on.</p><ul class="step__list"><li>90-day roadmap with forecasts</li><li>Channel mix &amp; budget plan</li><li>Agreed KPIs and reporting setup</li></ul><span class="step__time">Week 3</span></div>
           </li>
           <li class="step reveal">
             <span class="step__num">03</span>
-            <div><h3>Launch &amp; test</h3><p>Campaigns go live with rapid creative and landing page testing. Losers get cut, winners get budget.</p><span class="step__time">Week 4–8</span></div>
+            <div><h3>Launch &amp; test</h3><p>Campaigns go live with rapid creative and landing page testing. Losers get cut, winners get budget.</p><ul class="step__list"><li>Campaigns, content &amp; landing pages live</li><li>Weekly creative and A/B tests</li><li>Fixes to tracking and funnel leaks</li></ul><span class="step__time">Week 4–8</span></div>
           </li>
           <li class="step reveal">
             <span class="step__num">04</span>
-            <div><h3>Scale &amp; compound</h3><p>We double down on what works, expand into new channels and automate reporting into one live dashboard.</p><span class="step__time">Week 9–12</span></div>
+            <div><h3>Scale &amp; compound</h3><p>We double down on what works, expand into new channels and automate reporting into one live dashboard.</p><ul class="step__list"><li>Budget moved to winning channels</li><li>New markets and audiences tested</li><li>Monthly strategy review with your team</li></ul><span class="step__time">Week 9–12</span></div>
           </li>
         </ol>
       </div>
@@ -335,26 +473,73 @@
         </div>
       </div>
       <div class="cases" tabindex="0">
-        <article class="case reveal" style="--c1:#c6ff3d;--c2:#2bd99f">
+        <article class="case reveal" style="--c1:#d7192b;--c2:#3a060c">
           <div class="case__art"><img src="assets/clients/lumora.svg" alt="" /><span class="case__big">+412%</span><span class="case__label">organic revenue</span></div>
-          <div class="case__body"><span class="tag">SEO · Content</span><h3>Lumora Skincare</h3><p>Rebuilt their content hub around buyer intent and won 380 page-one keywords in 7 months.</p></div>
+          <div class="case__body"><span class="tag">SEO · Content</span><h3>Lumora Skincare</h3><p>Rebuilt their content hub around buyer intent and won 380 page-one keywords in 7 months.</p><div class="case__meta"><span><b>380</b> page-one keywords</span><span><b>7</b> months</span></div></div>
         </article>
-        <article class="case reveal" data-delay="1" style="--c1:#ff8a65;--c2:#ff3d7f">
+        <article class="case reveal" data-delay="1" style="--c1:#d7192b;--c2:#3a060c">
           <div class="case__art"><img src="assets/clients/kraftwell.svg" alt="" /><span class="case__big">7.2x</span><span class="case__label">blended ROAS</span></div>
-          <div class="case__body"><span class="tag">Paid Media · CRO</span><h3>Kraftwell Tools</h3><p>Restructured Google Shopping and Meta Advantage+ with profit-based bidding.</p></div>
+          <div class="case__body"><span class="tag">Paid Media · CRO</span><h3>Kraftwell Tools</h3><p>Restructured Google Shopping and Meta Advantage+ with profit-based bidding.</p><div class="case__meta"><span><b>2.8x → 7.2x</b> ROAS</span><span><b>Same</b> ad spend</span></div></div>
         </article>
-        <article class="case reveal" data-delay="2" style="--c1:#8ea2ff;--c2:#b07bff">
+        <article class="case reveal" data-delay="2" style="--c1:#d7192b;--c2:#3a060c">
           <div class="case__art"><img src="assets/clients/quantix.svg" alt="" /><span class="case__big">-58%</span><span class="case__label">cost per SQL</span></div>
-          <div class="case__body"><span class="tag">LinkedIn · ABM</span><h3>Quantix SaaS</h3><p>Account-based LinkedIn programme feeding 140 sales-qualified demos a quarter.</p></div>
+          <div class="case__body"><span class="tag">LinkedIn · ABM</span><h3>Quantix SaaS</h3><p>Account-based LinkedIn programme feeding 140 sales-qualified demos a quarter.</p><div class="case__meta"><span><b>140</b> demos / quarter</span><span><b>-58%</b> cost per SQL</span></div></div>
         </article>
-        <article class="case reveal" data-delay="3" style="--c1:#ffd166;--c2:#ff9f1c">
+        <article class="case reveal" data-delay="3" style="--c1:#d7192b;--c2:#3a060c">
           <div class="case__art"><img src="assets/clients/havenhomes.svg" alt="" /><span class="case__big">2.4M</span><span class="case__label">social reach / mo</span></div>
-          <div class="case__body"><span class="tag">Social · Creators</span><h3>Haven Homes</h3><p>Creator-led reels strategy that turned property tours into a lead machine.</p></div>
+          <div class="case__body"><span class="tag">Social · Creators</span><h3>Haven Homes</h3><p>Creator-led reels strategy that turned property tours into a lead machine.</p><div class="case__meta"><span><b>2.4M</b> monthly reach</span><span><b>3x</b> enquiries</span></div></div>
         </article>
-        <article class="case reveal" style="--c1:#6ee7ff;--c2:#3d8bff">
+        <article class="case reveal" style="--c1:#d7192b;--c2:#3a060c">
           <div class="case__art"><img src="assets/clients/orbitly.svg" alt="" /><span class="case__big">+186%</span><span class="case__label">trial sign-ups</span></div>
-          <div class="case__body"><span class="tag">CRO · Analytics</span><h3>Orbitly</h3><p>42 landing page experiments in one quarter, with server-side tracking to prove it.</p></div>
+          <div class="case__body"><span class="tag">CRO · Analytics</span><h3>Orbitly</h3><p>42 landing page experiments in one quarter, with server-side tracking to prove it.</p><div class="case__meta"><span><b>42</b> experiments</span><span><b>+186%</b> sign-ups</span></div></div>
         </article>
+      </div>
+    </section>
+
+    <!-- ================= INDUSTRIES ================= -->
+    <section class="industries">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Industries we serve</span>
+            <h2 class="reveal" data-delay="1">Deep experience in the<br/>markets that matter to you.</h2>
+          </div>
+          <p class="reveal" data-delay="2">Every industry has its own buyers, rules and seasonality. We bring playbooks that have already worked for businesses like yours — so you skip the expensive learning curve.</p>
+        </div>
+        <div class="ind-grid">
+          <div class="flip reveal flip-up"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#d7192b"><svg><use href="#i-cart"/></svg></span><h3>E-commerce &amp; D2C</h3><small>Shopify, Amazon, marketplaces</small></div>
+            <div class="flipcard__face flipcard__back"><h3>E-commerce &amp; D2C</h3><p>Shopping ads, product feeds and retention emails that grow repeat orders and average basket size.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#2563eb"><svg><use href="#i-home"/></svg></span><h3>Real Estate</h3><small>Developers, brokers, rentals</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Real Estate</h3><p>Project launches, virtual tours and lead forms that bring site visits from serious, qualified buyers.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#16a34a"><svg><use href="#i-health"/></svg></span><h3>Healthcare</h3><small>Clinics, hospitals, wellness</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Healthcare</h3><p>Compliant local SEO and patient-acquisition campaigns that fill appointment calendars.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#9333ea"><svg><use href="#i-edu"/></svg></span><h3>Education</h3><small>Schools, ed-tech, coaching</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Education</h3><p>Admission-season campaigns, webinars and nurture flows that turn enquiries into enrolments.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#0891b2"><svg><use href="#i-cloud"/></svg></span><h3>SaaS &amp; Tech</h3><small>B2B software, startups</small></div>
+            <div class="flipcard__face flipcard__back"><h3>SaaS &amp; Tech</h3><p>LinkedIn ABM, comparison pages and trial-to-paid funnels that lower cost per demo.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#ea580c"><svg><use href="#i-plane"/></svg></span><h3>Travel &amp; Hospitality</h3><small>Hotels, tours, resorts</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Travel &amp; Hospitality</h3><p>Direct-booking campaigns and review management that cut dependence on travel portals.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#0f766e"><svg><use href="#i-bank"/></svg></span><h3>Finance &amp; Insurance</h3><small>NBFCs, fintech, advisors</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Finance &amp; Insurance</h3><p>Trust-first content and lead generation that meets strict advertising guidelines.</p></div>
+          </div></div>
+          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
+            <div class="flipcard__face"><span class="ind-ic" style="--c:#db2777"><svg><use href="#i-food"/></svg></span><h3>Food &amp; Restaurants</h3><small>Cafés, QSR, cloud kitchens</small></div>
+            <div class="flipcard__face flipcard__back"><h3>Food &amp; Restaurants</h3><p>Local search, delivery-app visibility and Instagram content that keeps tables full.</p></div>
+          </div></div>
+        </div>
       </div>
     </section>
 
@@ -437,6 +622,48 @@
       </div>
     </section>
 
+    <!-- ================= INSIGHTS ================= -->
+    <section class="insights">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Insights</span>
+            <h2 class="reveal" data-delay="1">Fresh thinking from<br/>our growth team.</h2>
+          </div>
+          <a href="#" class="btn btn--ghost reveal" data-delay="2">View all articles <svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="posts">
+          <article class="post reveal flip">
+            <a href="#" class="post__img"><img src="assets/img/blog-1.svg" alt="" /><span class="post__tag">SEO</span></a>
+            <div class="post__body">
+              <small>8 min read · Oct 2026</small>
+              <h3><a href="#">How to rank in Google's AI Overviews (and why classic SEO still matters)</a></h3>
+              <p>AI answers are changing search. Here's the checklist we use to get clients cited — without losing their organic traffic.</p>
+              <a href="#" class="post__more">Read article <svg><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="post reveal flip" data-delay="1">
+            <a href="#" class="post__img"><img src="assets/img/blog-2.svg" alt="" /><span class="post__tag">Social</span></a>
+            <div class="post__body">
+              <small>6 min read · Sep 2026</small>
+              <h3><a href="#">The 3-second rule: writing reels hooks that stop the scroll</a></h3>
+              <p>Twelve hook formulas from our best-performing reels, with real retention data and examples you can copy tomorrow.</p>
+              <a href="#" class="post__more">Read article <svg><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="post reveal flip" data-delay="2">
+            <a href="#" class="post__img"><img src="assets/img/blog-3.svg" alt="" /><span class="post__tag">Paid Ads</span></a>
+            <div class="post__body">
+              <small>10 min read · Aug 2026</small>
+              <h3><a href="#">Stop optimising for ROAS: a profit-first framework for paid media</a></h3>
+              <p>Why a "good" ROAS can still lose you money, and the simple margin-based model we use to set bids instead.</p>
+              <a href="#" class="post__more">Read article <svg><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= FAQ ================= -->
     <section class="faq" id="faq">
       <div class="container faq__inner">
@@ -506,7 +733,7 @@
                 <option>Under $2k</option><option selected>$2k – $5k</option><option>$5k – $15k</option><option>$15k+</option>
               </select>
             </label>
-            <button type="submit" class="btn btn--lime btn--lg btn--block magnetic">Get my free audit <svg><use href="#i-arrow"/></svg></button>
+            <button type="submit" class="btn btn--lime btn--lg btn--block">Get my free audit <svg><use href="#i-arrow"/></svg></button>
             <p class="form__msg" role="status"></p>
           </form>
         </div>

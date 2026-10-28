@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" fill="none">
+  <!-- Social: phone with feed, megaphone, hearts and likes -->
+  <defs>
+    <linearGradient id="b2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient>
+  </defs>
+  <ellipse cx="280" cy="420" rx="210" ry="22" fill="#d7192b" opacity=".1"/>
+  <rect x="90" y="60" width="380" height="330" rx="190" fill="#ffe6e9"/>
+  <!-- phone -->
+  <rect x="200" y="40" width="180" height="360" rx="30" fill="#17171a"/>
+  <rect x="212" y="56" width="156" height="328" rx="20" fill="#fff"/>
+  <rect x="262" y="64" width="56" height="8" rx="4" fill="#17171a"/>
+  <circle cx="236" cy="96" r="14" fill="url(#b2a)"/>
+  <rect x="258" y="88" width="70" height="7" rx="3.5" fill="#17171a"/>
+  <rect x="258" y="100" width="44" height="6" rx="3" fill="#e3d8da"/>
+  <rect x="224" y="120" width="132" height="120" rx="12" fill="url(#b2a)"/>
+  <circle cx="264" cy="166" r="18" fill="#fff" opacity=".3"/>
+  <path d="M224 222l40-36 30 26 24-18 38 30v8a12 12 0 0 1-12 12H236a12 12 0 0 1-12-12z" fill="#fff" opacity=".35"/>
+  <path d="M236 262c0-6 8-9 11-3 3-6 11-3 11 3 0 6-11 12-11 12s-11-6-11-12z" fill="#d7192b"/>
+  <circle cx="282" cy="262" r="8" stroke="#17171a" stroke-width="3"/>
+  <path d="M310 256l14 6-14 6z" stroke="#17171a" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="224" y="288" width="120" height="7" rx="3.5" fill="#17171a"/>
+  <rect x="224" y="302" width="90" height="6" rx="3" fill="#e3d8da"/>
+  <rect x="224" y="326" width="132" height="44" rx="10" fill="#fff4f5" stroke="#f3dadd"/>
+  <rect x="236" y="340" width="60" height="7" rx="3.5" fill="#d7192b"/>
+  <rect x="236" y="352" width="40" height="6" rx="3" fill="#e3d8da"/>
+  <!-- megaphone -->
+  <g class="float-a">
+    <path d="M60 230l90-50v130l-90-50z" fill="url(#b2a)"/>
+    <rect x="34" y="226" width="34" height="38" rx="8" fill="#17171a"/>
+    <path d="M60 268l10 40h18l-6-34" fill="#17171a"/>
+    <path d="M162 214q16 31 0 62M176 200q26 45 0 90" stroke="#d7192b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- hearts / reactions -->
+  <g class="float-b">
+    <circle cx="460" cy="120" r="36" fill="url(#b2a)"/>
+    <path d="M446 116c0-9 11-13 14-4 3-9 14-5 14 4 0 9-14 17-14 17s-14-8-14-17z" fill="#fff"/>
+  </g>
+  <g class="float-c">
+    <rect x="400" y="210" width="130" height="58" rx="16" fill="#fff" stroke="#f0e3e5" stroke-width="2"/>
+    <text x="418" y="247" font-family="Times New Roman, serif" font-size="22" font-weight="700" fill="#17171a">+2.4M</text>
+    <circle cx="506" cy="239" r="11" fill="#d7192b"/>
+    <path d="M506 245v-12m-5 5 5-5 5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g class="float-a">
+    <circle cx="440" cy="330" r="22" fill="#fff" stroke="#f0e3e5" stroke-width="2"/>
+    <path d="M431 334v-10h5l4-8c3 0 4 2 4 4v4h6c2 0 3 2 3 3l-2 9c0 2-2 3-3 3h-12" stroke="#d7192b" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+  <circle cx="110" cy="110" r="8" fill="#d7192b" opacity=".35"/>
+  <circle cx="500" cy="400" r="6" fill="#d7192b"/>
+</svg>

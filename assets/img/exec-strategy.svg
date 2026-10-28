@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <!-- Strategy-to-execution board: kanban + target + checklist -->
+  <defs>
+    <linearGradient id="er" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient>
+  </defs>
+  <rect width="560" height="420" rx="32" fill="#fff"/>
+  <rect x="1" y="1" width="558" height="418" rx="31" stroke="#f1d6da" stroke-width="2"/>
+  <rect x="28" y="28" width="504" height="44" rx="12" fill="#fff4f5"/>
+  <circle cx="52" cy="50" r="7" fill="#d7192b"/><circle cx="72" cy="50" r="7" fill="#f3c3c9"/><circle cx="92" cy="50" r="7" fill="#f3c3c9"/>
+  <rect x="120" y="44" width="150" height="12" rx="6" fill="#17171a"/>
+  <rect x="420" y="40" width="96" height="20" rx="10" fill="url(#er)"/>
+  <!-- columns -->
+  <g font-family="Times New Roman, serif" font-size="15" font-weight="700" fill="#17171a">
+    <text x="40" y="104">Ideas</text><text x="210" y="104">In progress</text><text x="380" y="104">Live</text>
+  </g>
+  <g>
+    <rect x="34" y="116" width="150" height="70" rx="12" fill="#fff" stroke="#efe2e4" stroke-width="2"/>
+    <rect x="48" y="132" width="90" height="8" rx="4" fill="#17171a"/><rect x="48" y="148" width="120" height="6" rx="3" fill="#e6d9db"/><rect x="48" y="162" width="56" height="12" rx="6" fill="#ffe0e4"/>
+    <rect x="34" y="198" width="150" height="70" rx="12" fill="#fff" stroke="#efe2e4" stroke-width="2"/>
+    <rect x="48" y="214" width="70" height="8" rx="4" fill="#17171a"/><rect x="48" y="230" width="110" height="6" rx="3" fill="#e6d9db"/><rect x="48" y="244" width="40" height="12" rx="6" fill="#ffe0e4"/>
+
+    <rect x="204" y="116" width="150" height="90" rx="12" fill="url(#er)"/>
+    <rect x="218" y="132" width="96" height="8" rx="4" fill="#fff"/><rect x="218" y="148" width="120" height="6" rx="3" fill="#fff" opacity=".6"/>
+    <rect x="218" y="176" width="120" height="8" rx="4" fill="#fff" opacity=".25"/><rect x="218" y="176" width="78" height="8" rx="4" fill="#fff"/>
+    <rect x="204" y="218" width="150" height="70" rx="12" fill="#fff" stroke="#efe2e4" stroke-width="2"/>
+    <rect x="218" y="234" width="80" height="8" rx="4" fill="#17171a"/><rect x="218" y="250" width="110" height="6" rx="3" fill="#e6d9db"/><rect x="218" y="264" width="60" height="12" rx="6" fill="#ffe0e4"/>
+
+    <rect x="374" y="116" width="150" height="70" rx="12" fill="#fff" stroke="#efe2e4" stroke-width="2"/>
+    <circle cx="396" cy="140" r="10" fill="#16a34a"/><path d="m391 140 4 4 7-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="414" y="134" width="90" height="8" rx="4" fill="#17171a"/><rect x="388" y="160" width="116" height="6" rx="3" fill="#e6d9db"/>
+    <rect x="374" y="198" width="150" height="70" rx="12" fill="#fff" stroke="#efe2e4" stroke-width="2"/>
+    <circle cx="396" cy="222" r="10" fill="#16a34a"/><path d="m391 222 4 4 7-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="414" y="216" width="70" height="8" rx="4" fill="#17171a"/><rect x="388" y="242" width="100" height="6" rx="3" fill="#e6d9db"/>
+  </g>
+  <!-- target + arrow -->
+  <circle cx="110" cy="345" r="46" fill="#ffe6e9"/><circle cx="110" cy="345" r="30" fill="#fff"/><circle cx="110" cy="345" r="15" fill="url(#er)"/>
+  <path d="M190 300 122 340" stroke="#17171a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M190 300l14-6-4 14z" fill="#17171a"/>
+  <!-- results card -->
+  <rect x="230" y="306" width="294" height="84" rx="16" fill="#17171a"/>
+  <text x="252" y="338" font-family="Times New Roman, serif" font-size="14" fill="#fff" opacity=".7">Monthly leads</text>
+  <text x="252" y="372" font-family="Times New Roman, serif" font-size="30" font-weight="700" fill="#fff">+184%</text>
+  <path d="M380 370 410 350 440 358 470 330 500 322" stroke="#ff4757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="322" r="6" fill="#fff"/>
+</svg>

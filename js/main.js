@@ -30,6 +30,29 @@
     requestAnimationFrame(tick);
   };
 
+  /* ---------- flip variants for reveal ---------- */
+  $$('.bento .card, .case, .review').forEach((el) => el.classList.add('reveal', 'flip'));
+  $$('.step, .stat, .accordion details, .platform').forEach((el) => el.classList.add('reveal', 'flip-up'));
+
+  /* ---------- tool flip cards: build front/back faces ---------- */
+  $$('.tool').forEach((t) => {
+    const badge = t.querySelector('span');
+    const name = t.textContent.replace(badge.textContent, '').trim();
+    t.innerHTML = '';
+    const inner = document.createElement('div');
+    inner.className = 'tool__inner';
+    const front = document.createElement('div');
+    front.className = 'tool__face';
+    front.append(badge, document.createTextNode(name));
+    const back = document.createElement('div');
+    back.className = 'tool__face tool__back';
+    back.innerHTML = '<b>Certified</b><small></small>';
+    back.querySelector('small').textContent = name + ' experts';
+    inner.append(front, back);
+    t.appendChild(inner);
+    t.classList.add('flip-up');
+  });
+
   /* ---------- scroll reveal ---------- */
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -54,6 +77,44 @@
       wi = (wi + 1) % words.length;
       words[wi].classList.add('is-active');
     }, 3000);
+  }
+
+  /* ---------- hero banner slider ---------- */
+  const hsSlides = $$('.hs__slide');
+  if (hsSlides.length) {
+    const hero = $('.hero-slider');
+    const dots = $$('.hs__dots button');
+    const count = $('.hs__count b');
+    const DUR = 2000; // auto-rotate every 2 seconds
+    hero.style.setProperty('--hs-dur', DUR + 'ms');
+    let cur = 0, hsTimer;
+    const show = (i) => {
+      cur = (i + hsSlides.length) % hsSlides.length;
+      hsSlides.forEach((s, j) => {
+        s.classList.toggle('is-active', j === cur);
+        s.setAttribute('aria-hidden', j !== cur);
+        $$('a, button', s).forEach((el) => (el.tabIndex = j === cur ? 0 : -1));
+      });
+      dots.forEach((d, j) => {
+        d.classList.remove('on');
+        if (j === cur) { void d.offsetWidth; d.classList.add('on'); }
+      });
+      count.textContent = String(cur + 1).padStart(2, '0');
+    };
+    const play = () => { clearInterval(hsTimer); if (!reduceMotion) hsTimer = setInterval(() => show(cur + 1), DUR); };
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); play(); }));
+    $$('[data-hs]').forEach((b) => b.addEventListener('click', () => { show(cur + +b.dataset.hs); play(); }));
+    hero.addEventListener('mouseenter', () => { clearInterval(hsTimer); hero.classList.add('hs-paused'); });
+    hero.addEventListener('mouseleave', () => { hero.classList.remove('hs-paused'); play(); });
+    let hx = null;
+    hero.addEventListener('touchstart', (e) => { hx = e.touches[0].clientX; }, { passive: true });
+    hero.addEventListener('touchend', (e) => {
+      if (hx === null) return;
+      const dx = e.changedTouches[0].clientX - hx;
+      if (Math.abs(dx) > 50) { show(cur + (dx < 0 ? 1 : -1)); play(); }
+      hx = null;
+    });
+    show(0); play();
   }
 
   /* ---------- typewriter in SERP mock ---------- */
@@ -154,17 +215,7 @@
 
   /* ---------- pointer effects (desktop only) ---------- */
   if (finePointer && !reduceMotion) {
-    const glow = $('.cursor-glow');
-    let gx = innerWidth / 2, gy = innerHeight / 2, cx = gx, cy = gy;
-    addEventListener('mousemove', (e) => { gx = e.clientX; gy = e.clientY; document.body.classList.add('has-cursor'); });
-    document.addEventListener('mouseleave', () => document.body.classList.remove('has-cursor'));
-    (function follow() {
-      cx += (gx - cx) * 0.12; cy += (gy - cy) * 0.12;
-      glow.style.transform = `translate(${cx - 210}px, ${cy - 210}px)`;
-      requestAnimationFrame(follow);
-    })();
-
-    // magnetic buttons
+    // magnetic buttons (none currently use this class)
     $$('.magnetic').forEach((b) => {
       b.addEventListener('mousemove', (e) => {
         const r = b.getBoundingClientRect();

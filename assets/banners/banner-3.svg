@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" fill="none">
+  <!-- Performance: rocket launching from a target, funnel and coins -->
+  <defs>
+    <linearGradient id="b3a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient>
+    <linearGradient id="b3f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb02e"/><stop offset="1" stop-color="#d7192b" stop-opacity="0"/></linearGradient>
+  </defs>
+  <ellipse cx="280" cy="420" rx="220" ry="24" fill="#d7192b" opacity=".1"/>
+  <!-- target -->
+  <circle cx="200" cy="300" r="110" fill="#ffe6e9"/>
+  <circle cx="200" cy="300" r="80" fill="#fff"/>
+  <circle cx="200" cy="300" r="52" fill="#ffd0d6"/>
+  <circle cx="200" cy="300" r="24" fill="url(#b3a)"/>
+  <!-- rocket -->
+  <g class="rocket">
+    <path d="M330 300c-8 30-4 60 6 80 10-20 14-50 6-80z" fill="url(#b3f)"/>
+    <path d="M318 302c-30-60-10-150 30-200 40 50 60 140 30 200z" fill="#fff" stroke="#17171a" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M348 102c18 22 31 48 37 76h-74c6-28 19-54 37-76z" fill="url(#b3a)"/>
+    <circle cx="348" cy="208" r="20" fill="#ffe6e9" stroke="#17171a" stroke-width="6"/>
+    <path d="M318 262l-32 30 4 26 34-14zM378 262l32 30-4 26-34-14z" fill="url(#b3a)" stroke="#17171a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="330" y="296" width="36" height="12" rx="4" fill="#17171a"/>
+  </g>
+  <!-- dotted trajectory -->
+  <path d="M220 290C260 260 290 240 320 200" stroke="#d7192b" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <!-- funnel card -->
+  <g class="float-b">
+    <rect x="420" y="70" width="120" height="140" rx="18" fill="#fff" stroke="#f0e3e5" stroke-width="2"/>
+    <path d="M440 96h80l-12 18h-56zM452 120h56l-10 18h-36zM464 144h32l-8 18h-16z" fill="url(#b3a)"/>
+    <rect x="452" y="176" width="56" height="8" rx="4" fill="#17171a"/>
+    <rect x="462" y="190" width="36" height="6" rx="3" fill="#e3d8da"/>
+  </g>
+  <!-- ROAS chip -->
+  <g class="float-c">
+    <rect x="30" y="80" width="150" height="62" rx="16" fill="url(#b3a)"/>
+    <text x="48" y="108" font-family="Times New Roman, serif" font-size="13" fill="#fff" opacity=".85">ROAS</text>
+    <text x="48" y="130" font-family="Times New Roman, serif" font-size="24" font-weight="700" fill="#fff">7.2x</text>
+    <path d="M120 124l14-14 10 8 18-20" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- coins -->
+  <g class="float-a">
+    <ellipse cx="470" cy="330" rx="34" ry="12" fill="#a50e1c"/>
+    <rect x="436" y="300" width="68" height="30" fill="#d7192b"/>
+    <ellipse cx="470" cy="300" rx="34" ry="12" fill="#ff4757"/>
+    <ellipse cx="470" cy="292" rx="34" ry="12" fill="#a50e1c"/>
+    <rect x="436" y="268" width="68" height="24" fill="#d7192b"/>
+    <ellipse cx="470" cy="268" rx="34" ry="12" fill="#ff6b78"/>
+    <text x="462" y="274" font-family="Times New Roman, serif" font-size="16" font-weight="700" fill="#fff">$</text>
+  </g>
+  <circle cx="90" cy="220" r="7" fill="#d7192b"/>
+  <circle cx="400" cy="40" r="5" fill="#d7192b" opacity=".5"/>
+  <path d="M510 240l8 8m0-8-8 8" stroke="#d7192b" stroke-width="3" stroke-linecap="round"/>
+</svg>

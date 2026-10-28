@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
+  <!-- Analytics: dashboard with donut, bars, funnel, A/B test -->
+  <defs><linearGradient id="ar2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient></defs>
+  <rect width="520" height="400" rx="32" fill="#fff4f5"/>
+  <rect x="34" y="40" width="452" height="320" rx="22" fill="#fff" stroke="#f1d6da" stroke-width="2"/>
+  <rect x="34" y="40" width="110" height="320" rx="22" fill="#17171a"/>
+  <rect x="56" y="70" width="66" height="10" rx="5" fill="#fff"/>
+  <g fill="#fff" opacity=".35"><rect x="56" y="110" width="56" height="8" rx="4"/><rect x="56" y="134" width="46" height="8" rx="4"/><rect x="56" y="158" width="60" height="8" rx="4"/><rect x="56" y="182" width="40" height="8" rx="4"/></g>
+  <rect x="50" y="128" width="78" height="22" rx="8" fill="#d7192b"/>
+  <rect x="58" y="136" width="50" height="7" rx="3.5" fill="#fff"/>
+  <!-- kpis -->
+  <rect x="166" y="62" width="96" height="62" rx="12" fill="#fff4f5"/><rect x="178" y="76" width="40" height="7" rx="3.5" fill="#c9b9bc"/><rect x="178" y="94" width="62" height="14" rx="7" fill="#17171a"/>
+  <rect x="274" y="62" width="96" height="62" rx="12" fill="url(#ar2)"/><rect x="286" y="76" width="40" height="7" rx="3.5" fill="#fff" opacity=".6"/><rect x="286" y="94" width="62" height="14" rx="7" fill="#fff"/>
+  <rect x="382" y="62" width="88" height="62" rx="12" fill="#fff4f5"/><rect x="394" y="76" width="40" height="7" rx="3.5" fill="#c9b9bc"/><rect x="394" y="94" width="54" height="14" rx="7" fill="#17171a"/>
+  <!-- bars -->
+  <g fill="#d7192b">
+    <rect x="176" y="250" width="22" height="60" rx="5" opacity=".3"/><rect x="208" y="226" width="22" height="84" rx="5" opacity=".45"/>
+    <rect x="240" y="236" width="22" height="74" rx="5" opacity=".6"/><rect x="272" y="196" width="22" height="114" rx="5" opacity=".8"/>
+    <rect x="304" y="170" width="22" height="140" rx="5"/>
+  </g>
+  <path d="M168 312h168" stroke="#e6d9db" stroke-width="2"/>
+  <!-- donut -->
+  <circle cx="414" cy="200" r="42" stroke="#ffe0e4" stroke-width="18"/>
+  <path d="M414 158a42 42 0 1 1-40 54" stroke="url(#ar2)" stroke-width="18" stroke-linecap="round"/>
+  <text x="396" y="207" font-family="Times New Roman, serif" font-size="18" font-weight="700" fill="#17171a">72%</text>
+  <!-- A/B chip -->
+  <rect x="362" y="268" width="108" height="60" rx="14" fill="#17171a"/>
+  <text x="378" y="294" font-family="Times New Roman, serif" font-size="13" fill="#fff" opacity=".7">Variant B</text>
+  <text x="378" y="316" font-family="Times New Roman, serif" font-size="18" font-weight="700" fill="#ff4757">+31% CVR</text>
+</svg>

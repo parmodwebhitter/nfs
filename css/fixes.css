@@ -1,0 +1,90 @@
+/* ==========================================================
+   Refinements: hero spacing & arrows, buttons, trusted logos,
+   about image, no cursor colour effects   (loaded last)
+   ========================================================== */
+
+/* ---------- no cursor-follow colour ---------- */
+.card::before { display: none; }
+.cursor-glow { display: none; }
+
+/* ---------- header buttons ---------- */
+.header__phone {
+  padding: 10px 18px; border: 1.5px solid var(--lime); border-radius: 99px; color: var(--lime);
+  transition: background .3s, color .3s;
+}
+.header__phone:hover { background: var(--lime); color: #fff; }
+.header__phone:hover svg { color: #fff; }
+
+/* calmer, premium hover for every button: colour fill + shine sweep, no shaking */
+.btn { transition: background .35s, color .35s, border-color .35s, box-shadow .35s; transform: none !important; }
+.btn::after {
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%);
+  transform: translateX(-120%); transition: transform .8s var(--ease);
+}
+.btn:hover::after { transform: translateX(120%); }
+.btn svg { transition: transform .35s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+.btn--dark:hover { background: var(--lime); box-shadow: 0 12px 30px -12px rgba(215,25,43,.7); }
+.btn--lime:hover { background: #b5121f; }
+.btn--ghost { border: 1.5px solid var(--lime); color: var(--lime); background: #fff; }
+.btn--ghost:hover { background: var(--lime); color: #fff; border-color: var(--lime); }
+.btn:focus-visible { outline: 3px solid rgba(215,25,43,.35); outline-offset: 3px; }
+
+/* ---------- hero: pure white, tighter top spacing ---------- */
+.hero-slider { background: #fff; padding: 92px 0 36px; position: relative; }
+.hs__inner { min-height: 470px; gap: 40px; }
+.hs__controls { margin-top: 0; }
+.hs__dots button.on i { animation-duration: var(--hs-dur, 2s); }
+
+/* big, always-visible side arrows */
+.hs__side {
+  position: absolute; top: 50%; z-index: 5; transform: translateY(-50%);
+  width: 56px; height: 56px; border-radius: 50%; border: 0; display: grid; place-items: center;
+  background: var(--lime); color: #fff; font-size: 22px;
+  box-shadow: 0 14px 30px -10px rgba(215,25,43,.6);
+  transition: background .3s, box-shadow .3s;
+}
+.hs__side:hover { background: #17171a; box-shadow: 0 14px 30px -10px rgba(0,0,0,.5); }
+.hs__side--prev { left: 14px; }
+@media (min-width: 1101px) {
+  .hero-slider .hs__inner, .hero-slider .hs__controls { padding-inline: 60px; }
+}
+.hs__side--next { right: 14px; }
+
+/* ---------- trusted-by strip: distinct background, big colour logos ---------- */
+.logos { background: #f5f5f7; border-block: 1px solid #e8e8ec; padding: 44px 0 50px; }
+.logos__head p { color: #000; font-size: 1.05rem; font-weight: 700; margin-bottom: 26px; }
+.marquee__track { gap: 80px; }
+.marquee__track img { height: 56px; opacity: 1; filter: none; }
+.marquee__track img:hover { transform: scale(1.1); }
+
+/* client logos used on red backgrounds stay white */
+.review figcaption img { filter: brightness(0) invert(1); opacity: .7; }
+.review:hover figcaption img { filter: none; opacity: 1; }
+
+/* ---------- about: image with flip badge ---------- */
+.about__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.about__media { position: relative; }
+.about__img { width: 100%; height: auto; border-radius: 32px; box-shadow: 0 40px 80px -40px rgba(160,10,25,.45); transition: transform .6s var(--ease); }
+.about__media:hover .about__img { transform: scale(1.02); }
+.about__badge { position: absolute; left: -24px; bottom: -30px; width: 170px; min-height: 170px; }
+.about__badge strong { font-size: 2.8rem; }
+.about__badge span { font-size: .75rem; }
+.about__badge .flipcard__face { padding: 14px; box-shadow: 0 20px 40px -18px rgba(160,10,25,.55); }
+
+@media (max-width: 1100px) {
+  .hs__side { top: 230px; transform: none; width: 48px; height: 48px; }
+  .about__inner { grid-template-columns: 1fr; }
+  .about__media { max-width: 560px; margin-inline: auto; }
+  .about__badge { left: 10px; }
+}
+@media (max-width: 640px) {
+  .hero-slider { padding-top: 84px; }
+  .hs__side { top: 150px; width: 42px; height: 42px; font-size: 18px; }
+  .hs__side--prev { left: 8px; } .hs__side--next { right: 8px; }
+  .marquee__track img { height: 44px; }
+  .marquee__track { gap: 50px; }
+  .about__badge { width: 130px; min-height: 130px; bottom: -24px; }
+  .about__badge strong { font-size: 2.1rem; }
+  .header__phone { display: none; }
+}
