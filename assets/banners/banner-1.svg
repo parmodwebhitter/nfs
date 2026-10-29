@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" fill="none">
   <!-- SEO: laptop with rising chart, magnifier, floating badges -->
   <defs>
-    <linearGradient id="b1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient>
-    <linearGradient id="b1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffe6e9"/></linearGradient>
+    <linearGradient id="b1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#172f6e"/></linearGradient>
+    <linearGradient id="b1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6eeff"/></linearGradient>
   </defs>
-  <ellipse cx="280" cy="410" rx="230" ry="26" fill="#d7192b" opacity=".1"/>
-  <circle cx="300" cy="210" r="170" fill="#ffe6e9"/>
+  <ellipse cx="280" cy="410" rx="230" ry="26" fill="#1d4ed8" opacity=".1"/>
+  <circle cx="300" cy="210" r="170" fill="#e6eeff"/>
   <circle cx="300" cy="210" r="120" fill="#fff" opacity=".7"/>
   <!-- laptop -->
   <rect x="120" y="120" width="320" height="210" rx="16" fill="#17171a"/>
@@ -13,9 +13,9 @@
   <path d="M90 330h380l-24 34H114z" fill="#d9d4d6"/>
   <rect x="250" y="334" width="60" height="8" rx="4" fill="#b8b1b4"/>
   <!-- screen content -->
-  <rect x="150" y="150" width="90" height="10" rx="5" fill="#d7192b"/>
-  <rect x="150" y="168" width="60" height="7" rx="3.5" fill="#e8dfe1"/>
-  <g fill="#d7192b">
+  <rect x="150" y="150" width="90" height="10" rx="5" fill="#1d4ed8"/>
+  <rect x="150" y="168" width="60" height="7" rx="3.5" fill="#dfe4ec"/>
+  <g fill="#1d4ed8">
     <rect class="bar" x="160" y="262" width="26" height="40" rx="5" opacity=".35"/>
     <rect class="bar" x="198" y="242" width="26" height="60" rx="5" opacity=".5"/>
     <rect class="bar" x="236" y="222" width="26" height="80" rx="5" opacity=".7"/>
@@ -23,30 +23,30 @@
   </g>
   <path d="M160 250 210 226 250 206 300 176 352 152" stroke="#17171a" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 8"/>
   <path d="M340 146 356 150 350 165" stroke="#17171a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="320" y="196" width="92" height="104" rx="10" fill="#fff" stroke="#f0e3e5" stroke-width="2"/>
-  <circle cx="366" cy="236" r="24" stroke="#ffe0e4" stroke-width="10"/>
-  <path d="M366 212a24 24 0 0 1 22 33" stroke="#d7192b" stroke-width="10" stroke-linecap="round"/>
-  <rect x="338" y="272" width="56" height="7" rx="3.5" fill="#e8dfe1"/>
+  <rect x="320" y="196" width="92" height="104" rx="10" fill="#fff" stroke="#e3e8f0" stroke-width="2"/>
+  <circle cx="366" cy="236" r="24" stroke="#dde8ff" stroke-width="10"/>
+  <path d="M366 212a24 24 0 0 1 22 33" stroke="#1d4ed8" stroke-width="10" stroke-linecap="round"/>
+  <rect x="338" y="272" width="56" height="7" rx="3.5" fill="#dfe4ec"/>
   <!-- magnifier -->
   <g class="float-a">
     <circle cx="470" cy="150" r="46" fill="#fff" stroke="url(#b1a)" stroke-width="14"/>
-    <path d="M454 150h32M470 134v32" stroke="#d7192b" stroke-width="6" stroke-linecap="round" opacity=".25"/>
+    <path d="M454 150h32M470 134v32" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round" opacity=".25"/>
     <path d="M502 184l34 34" stroke="#17171a" stroke-width="16" stroke-linecap="round"/>
   </g>
   <!-- floating chips -->
   <g class="float-b">
-    <rect x="40" y="70" width="140" height="54" rx="14" fill="#fff" stroke="#f0e3e5" stroke-width="2"/>
-    <circle cx="68" cy="97" r="14" fill="#d7192b"/>
+    <rect x="40" y="70" width="140" height="54" rx="14" fill="#fff" stroke="#e3e8f0" stroke-width="2"/>
+    <circle cx="68" cy="97" r="14" fill="#1d4ed8"/>
     <path d="m61 97 5 5 9-10" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="90" y="86" width="72" height="8" rx="4" fill="#17171a"/>
-    <rect x="90" y="100" width="48" height="7" rx="3.5" fill="#e3d8da"/>
+    <rect x="90" y="100" width="48" height="7" rx="3.5" fill="#d8dee8"/>
   </g>
   <g class="float-c">
     <rect x="380" y="352" width="150" height="54" rx="14" fill="url(#b1a)"/>
     <text x="398" y="386" font-family="Times New Roman, serif" font-size="22" font-weight="700" fill="#fff">#1 Rank</text>
     <path d="M500 392V368m-8 8 8-8 8 8" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <circle cx="70" cy="300" r="10" fill="#d7192b" opacity=".3"/>
-  <circle cx="520" cy="290" r="6" fill="#d7192b"/>
-  <path d="M90 220l8 8m0-8-8 8" stroke="#d7192b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="70" cy="300" r="10" fill="#1d4ed8" opacity=".3"/>
+  <circle cx="520" cy="290" r="6" fill="#1d4ed8"/>
+  <path d="M90 220l8 8m0-8-8 8" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
 </svg>

@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
   <!-- Content studio: video player, article, camera -->
-  <defs><linearGradient id="cr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient></defs>
-  <rect width="520" height="400" rx="32" fill="#fff4f5"/>
+  <defs><linearGradient id="cr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#172f6e"/></linearGradient></defs>
+  <rect width="520" height="400" rx="32" fill="#f4f7ff"/>
   <circle cx="420" cy="80" r="70" fill="#fff"/>
   <!-- video -->
   <rect x="40" y="50" width="290" height="180" rx="18" fill="url(#cr)"/>
   <circle cx="185" cy="140" r="34" fill="#fff"/>
-  <path d="M176 122v36l30-18z" fill="#d7192b"/>
+  <path d="M176 122v36l30-18z" fill="#1d4ed8"/>
   <rect x="60" y="206" width="250" height="6" rx="3" fill="#fff" opacity=".3"/>
   <rect x="60" y="206" width="140" height="6" rx="3" fill="#fff"/>
   <!-- article -->
-  <rect x="240" y="170" width="240" height="190" rx="18" fill="#fff" stroke="#f1d6da" stroke-width="2"/>
-  <rect x="260" y="190" width="200" height="70" rx="10" fill="#ffe0e4"/>
-  <path d="M260 250l50-40 40 30 30-20 80 40v0H260z" fill="#f3a7b0"/>
+  <rect x="240" y="170" width="240" height="190" rx="18" fill="#fff" stroke="#d6e0f1" stroke-width="2"/>
+  <rect x="260" y="190" width="200" height="70" rx="10" fill="#dde8ff"/>
+  <path d="M260 250l50-40 40 30 30-20 80 40v0H260z" fill="#a7c0f3"/>
   <rect x="260" y="276" width="170" height="10" rx="5" fill="#17171a"/>
-  <rect x="260" y="296" width="200" height="7" rx="3.5" fill="#e6d9db"/>
-  <rect x="260" y="310" width="180" height="7" rx="3.5" fill="#e6d9db"/>
+  <rect x="260" y="296" width="200" height="7" rx="3.5" fill="#d9dfe8"/>
+  <rect x="260" y="310" width="180" height="7" rx="3.5" fill="#d9dfe8"/>
   <rect x="260" y="330" width="80" height="16" rx="8" fill="url(#cr)"/>
   <!-- camera -->
   <rect x="50" y="270" width="140" height="90" rx="16" fill="#17171a"/>
   <rect x="80" y="258" width="44" height="16" rx="5" fill="#17171a"/>
   <circle cx="120" cy="315" r="28" fill="#3b3b42"/><circle cx="120" cy="315" r="17" fill="url(#cr)"/><circle cx="114" cy="309" r="5" fill="#fff" opacity=".7"/>
-  <circle cx="170" cy="286" r="5" fill="#ff4757"/>
+  <circle cx="170" cy="286" r="5" fill="#3b82f6"/>
   <!-- pen -->
   <path d="M440 120 470 90l14 14-30 30-18 4z" fill="#17171a"/>
-  <path d="M466 94l14 14" stroke="#ff4757" stroke-width="4"/>
+  <path d="M466 94l14 14" stroke="#3b82f6" stroke-width="4"/>
 </svg>

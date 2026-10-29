@@ -1,0 +1,259 @@
+<title>NFS Digital Homepage Blueprint</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Layout: single reading column with a two-column wireframe + notes table for the section hierarchy */
+  :root {
+    --bg: #f7f9fd; --surface: #ffffff; --fg: #0f1a33; --muted: #5a6680; --line: #dbe2ef;
+    --accent: #1d4ed8; --accent-soft: #e6eeff; --ok: #15803d; --ok-soft: #e3f5e9; --todo: #b45309; --todo-soft: #fdf1df;
+    --wire: #e9eef7; --wire-2: #d3dcec;
+    --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0c1220; --surface: #131b2e; --fg: #e8edf7; --muted: #98a3bb; --line: #26324c;
+    --accent: #7aa2ff; --accent-soft: #1b2a4d; --ok: #5fd08a; --ok-soft: #14301f; --todo: #f0b061; --todo-soft: #3a2a12;
+    --wire: #1b2540; --wire-2: #2a3758; color-scheme: dark; } }
+  :root[data-theme="dark"] {
+    --bg: #0c1220; --surface: #131b2e; --fg: #e8edf7; --muted: #98a3bb; --line: #26324c;
+    --accent: #7aa2ff; --accent-soft: #1b2a4d; --ok: #5fd08a; --ok-soft: #14301f; --todo: #f0b061; --todo-soft: #3a2a12;
+    --wire: #1b2540; --wire-2: #2a3758; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 80px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1, h2, h3 { line-height: 1.2; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; }
+  h2 { font-size: 1.45rem; margin-bottom: 14px; }
+  h3 { font-size: 1.05rem; }
+  p { margin: 0; max-width: 68ch; }
+  .label { font: 500 .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .meta { color: var(--muted); margin-top: 10px; }
+  section { margin-top: 56px; display: grid; gap: 16px; }
+  .lede { font-size: 1.1rem; color: var(--muted); margin-top: 14px; }
+
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .principle { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+  .principle p { color: var(--muted); font-size: .95rem; }
+
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
+  .chip { display: inline-block; font: 500 .72rem var(--mono); padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+  .chip.ok { background: var(--ok-soft); color: var(--ok); }
+  .chip.todo { background: var(--todo-soft); color: var(--todo); }
+
+  .rows { display: grid; gap: 10px; }
+  .row { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .row .num { font: 500 .8rem var(--mono); color: var(--muted); }
+  .row .head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+  .row .why { color: var(--muted); font-size: .94rem; }
+  .row ul { margin: 8px 0 0; padding-left: 18px; font-size: .94rem; }
+  .row li + li { margin-top: 2px; }
+
+  /* wireframe blocks */
+  .wf { background: var(--wire); border-radius: 8px; padding: 10px; display: grid; gap: 6px; align-content: start; min-height: 90px; }
+  .b { background: var(--wire-2); border-radius: 4px; height: 8px; }
+  .b.t { height: 14px; width: 70%; }
+  .b.s { width: 45%; }
+  .b.btn { height: 16px; width: 36%; background: var(--accent); opacity: .8; border-radius: 99px; }
+  .b.btn2 { height: 16px; width: 30%; border: 1.5px solid var(--accent); background: transparent; border-radius: 99px; }
+  .g2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 8px; }
+  .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .tile { background: var(--wire-2); border-radius: 4px; height: 34px; }
+  .tile.tall { height: 54px; }
+  .img { background: var(--wire-2); border-radius: 6px; min-height: 60px; position: relative; }
+  .img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 49%, var(--wire) 50%, transparent 51%); }
+  .bar { background: var(--accent); opacity: .85; border-radius: 6px; height: 40px; }
+  .inline { display: flex; gap: 6px; } .inline .b { flex: 1; height: 16px; background: var(--surface); border: 1px solid var(--wire-2); }
+  .inline .b.btn { flex: 0 0 30%; border: 0; }
+
+  .checklist { display: grid; gap: 10px; }
+  .item { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .item .n { width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font: 500 .8rem var(--mono); }
+  .item p { color: var(--muted); font-size: .94rem; margin-top: 2px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: .95rem; }
+  .tablebox { overflow-x: auto; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 500 .75rem var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+  .note { background: var(--accent-soft); border-radius: 12px; padding: 16px 18px; font-size: .95rem; }
+  .note b { color: var(--accent); }
+
+  @media (max-width: 680px) {
+    .row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="label">NFS Digital · Website planning · Draft for review</span>
+    <h1>Homepage blueprint</h1>
+    <p class="lede">Proposed section order for the NFS Digital homepage, built around one goal: turning visitors into enquiries. Includes a dummy layout for each section, the AI-search (ChatGPT &amp; Bing) plan, and the first set of pages.</p>
+    <p class="meta">Prepared 29 Oct 2026 · Theme: blue &amp; white · Phone number: dummy for now · Logos and case studies to be supplied</p>
+  </header>
+
+  <section>
+    <span class="label">What we looked at</span>
+    <h2>What makes agency visitors become leads</h2>
+    <p>We reviewed the homepages of large agencies and our direct market (Web Hitters, Brandwitty, WebFX, Ignite Visibility, Thrive and PageTraffic) for the patterns they share. Seven points come up again and again on the sites that are built to convert:</p>
+    <div class="principles">
+      <div class="principle"><h3>One clear offer above the fold</h3><p>A specific outcome in the headline and one low-effort action, usually a free audit or proposal, with the form or button visible without scrolling.</p></div>
+      <div class="principle"><h3>Proof straight after the hero</h3><p>Star ratings, review counts and client logos within the first screen and a half. Visitors look for trust before they read services.</p></div>
+      <div class="principle"><h3>Numbers, not adjectives</h3><p>Results such as "+212% leads in 6 months" outperform claims like "best agency". Every proof section should carry a figure.</p></div>
+      <div class="principle"><h3>A call to action every 2–3 sections</h3><p>Sticky header button, mid-page audit band and a final form. On mobile: a sticky call / WhatsApp bar, which matters a lot in the Indian market.</p></div>
+      <div class="principle"><h3>Short forms</h3><p>3–4 fields convert far better than long forms. Website URL + email is enough to start an audit; qualify later by phone.</p></div>
+      <div class="principle"><h3>Remove the risk</h3><p>"Free audit", "no lock-in contract", "reply within 24 hours" next to every form reduce hesitation.</p></div>
+      <div class="principle"><h3>Show the price range</h3><p>Starting-from packages (as Web Hitters does) pre-qualify leads and stop visitors leaving to find pricing elsewhere.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">Section hierarchy</span>
+    <h2>Homepage, top to bottom</h2>
+    <div class="legend"><span><span class="chip ok">In current build</span> already in the draft site</span><span><span class="chip todo">To add</span> proposed new</span></div>
+    <div class="rows">
+
+      <div class="row">
+        <div class="wf"><div class="g4"><div class="b"></div><div class="b"></div><div class="b"></div><div class="b btn" style="width:100%"></div></div></div>
+        <div><div class="head"><span class="num">00</span><h3>Header</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Logo, menu (Services, Case studies, About, Blog, Contact), phone number and a "Free audit" button that stays visible while scrolling.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g2"><div style="display:grid;gap:6px"><div class="b t"></div><div class="b"></div><div class="b s"></div><div class="inline"><div class="b"></div><div class="b btn"></div></div><div class="b s"></div></div><div class="img"></div></div></div>
+        <div><div class="head"><span class="num">01</span><h3>Hero with inline audit form</h3><span class="chip ok">Slider built</span><span class="chip todo">Add inline form</span></div>
+          <p class="why">The single most important section. Outcome headline, one line of support, a two-field form ("Your website" + "Email" → "Get my free audit") and a rating line underneath.</p>
+          <ul><li>Keep 2–3 slides at most, or use one static hero; most visitors only see the first slide</li><li>Secondary button: "See our results"</li></ul></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g4"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div><div class="b s"></div></div>
+        <div><div class="head"><span class="num">02</span><h3>Trust strip</h3><span class="chip ok">In current build</span><span class="chip todo">Add rating badges</span></div>
+          <p class="why">Client logos plus Google / Clutch rating badges. Logos will be NFS-specific (not the same as Web Hitters), to be supplied.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="b t"></div><div class="g3"><div class="tile tall"></div><div class="tile tall"></div><div class="tile tall"></div></div></div>
+        <div><div class="head"><span class="num">03</span><h3>Problems we solve</h3><span class="chip todo">To add</span></div>
+          <p class="why">Speaks the visitor's pain in their words: "Getting traffic but no leads", "Ads spend with no ROI", "Invisible on Google and ChatGPT". Each card points to the matching service.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="b t"></div><div class="g3"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div></div>
+        <div><div class="head"><span class="num">04</span><h3>Services</h3><span class="chip ok">In current build</span></div>
+          <p class="why">6–8 service cards, each linking to its own service page (important for SEO). SEO, AI search, PPC, social media, content, web design, e-commerce, reputation.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g2"><div class="img"></div><div style="display:grid;gap:6px"><div class="b t"></div><div class="b"></div><div class="b"></div><div class="b btn"></div></div></div></div>
+        <div><div class="head"><span class="num">05</span><h3>Get found on ChatGPT &amp; AI search</h3><span class="chip todo">To add</span></div>
+          <p class="why">A dedicated band for the new differentiator: visibility in ChatGPT, Bing Copilot, Perplexity and Google AI Overviews. Few competitors explain this clearly yet, so it is a strong hook.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="bar"></div><div class="g3"><div class="tile"></div><div class="tile"></div><div class="tile"></div></div></div>
+        <div><div class="head"><span class="num">06</span><h3>Results &amp; case highlights</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Stats band (years, clients, revenue influenced, retention) plus 3–5 case cards with before/after numbers. Real case studies to be supplied.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="b t"></div><div class="g4"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div></div>
+        <div><div class="head"><span class="num">07</span><h3>Why NFS + process</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Differentiators (dedicated manager, weekly reporting, no lock-in), certifications, and the 4-step process from audit to scale.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="b t"></div><div class="g4"><div class="tile tall"></div><div class="tile tall"></div><div class="tile tall"></div><div class="tile tall"></div></div></div>
+        <div><div class="head"><span class="num">08</span><h3>Packages from ₹ / $</h3><span class="chip todo">To add</span></div>
+          <p class="why">3–4 starting-from packages (SEO, Social, Paid ads, Complete) with an "I'm interested" button that opens the short form. Pricing to be confirmed by management.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g3"><div class="tile tall"></div><div class="tile tall"></div><div class="tile tall"></div></div><div class="b s"></div></div>
+        <div><div class="head"><span class="num">09</span><h3>Reviews</h3><span class="chip ok">Slider built</span><span class="chip todo">Real reviews</span></div>
+          <p class="why">Google reviews (embed or curated) and short video testimonials. Currently placeholder text until real reviews are provided.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="bar" style="height:30px"></div><div class="inline"><div class="b"></div><div class="b"></div><div class="b btn"></div></div></div>
+        <div><div class="head"><span class="num">10</span><h3>Free audit band (mid-page CTA)</h3><span class="chip todo">To add</span></div>
+          <p class="why">Full-width blue band repeating the audit offer with the same two-field form, for visitors who scrolled past the hero.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g4"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div></div>
+        <div><div class="head"><span class="num">11</span><h3>Industries</h3><span class="chip ok">In current build</span></div>
+          <p class="why">8 industry cards (real estate, healthcare, e-commerce, education…). Each can later become its own landing page.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="b"></div><div class="b"></div><div class="b"></div><div class="b s"></div></div>
+        <div><div class="head"><span class="num">12</span><h3>FAQ</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Answers the objections (results timeline, contracts, budget, who works on the account). Marked up with FAQ schema, which helps both Google and AI answers.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g3"><div class="img"></div><div class="img"></div><div class="img"></div></div></div>
+        <div><div class="head"><span class="num">13</span><h3>Blog / insights</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Latest 3 articles. Keeps the homepage fresh and feeds the AI-search content plan below.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="g2"><div style="display:grid;gap:6px"><div class="b t"></div><div class="b"></div><div class="b s"></div></div><div style="display:grid;gap:6px"><div class="b"></div><div class="b"></div><div class="b btn" style="width:100%"></div></div></div></div>
+        <div><div class="head"><span class="num">14</span><h3>Final CTA + contact form, footer</h3><span class="chip ok">In current build</span></div>
+          <p class="why">Short form (name, email, website, service), risk-reversal points, then footer with address, phone, email and links to every service page.</p></div>
+      </div>
+
+      <div class="row">
+        <div class="wf"><div class="inline"><div class="b btn" style="flex:1"></div><div class="b btn2" style="flex:1;height:16px"></div></div></div>
+        <div><div class="head"><span class="num">+</span><h3>Floating WhatsApp / call buttons</h3><span class="chip todo">To add</span></div>
+          <p class="why">Sticky on mobile on every page. Often the highest-converting element for Indian traffic.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">ChatGPT &amp; Bing</span>
+    <h2>How we get NFS Digital recommended by AI search</h2>
+    <p>ChatGPT search relies heavily on Bing's index (alongside OpenAI's own crawler), so ranking on Bing and being cited by ChatGPT go together. The plan:</p>
+    <div class="checklist">
+      <div class="item"><span class="n">1</span><div><h3>Get indexed by Bing fast</h3><p>Verify the site in Bing Webmaster Tools, submit the sitemap, enable IndexNow so new pages are picked up within hours, and list the business on Bing Places.</p></div></div>
+      <div class="item"><span class="n">2</span><div><h3>Let the AI crawlers in</h3><p>robots.txt allows Bingbot, OAI-SearchBot (ChatGPT search), GPTBot, PerplexityBot and others. <b>Done in the draft site.</b></p></div></div>
+      <div class="item"><span class="n">3</span><div><h3>Content that is easy to quote</h3><p>Question-style headings with a direct 40–60 word answer underneath, comparison tables, and figures with sources. Plain HTML so content is readable without JavaScript.</p></div></div>
+      <div class="item"><span class="n">4</span><div><h3>Structured data</h3><p>Organization / ProfessionalService and FAQ schema on the homepage (<b>done in the draft</b>), plus Service, Review and Article schema on inner pages.</p></div></div>
+      <div class="item"><span class="n">5</span><div><h3>Be mentioned elsewhere</h3><p>AI answers lean on third-party sources: Clutch, GoodFirms, Google reviews, LinkedIn, industry "top agencies" lists and press mentions. Keep the name, address and phone identical everywhere.</p></div></div>
+      <div class="item"><span class="n">6</span><div><h3>Measure it</h3><p>Track visits from chatgpt.com, copilot.microsoft.com and perplexity.ai in GA4, and run a fixed set of test prompts each month (e.g. "best SEO agency in Delhi") to see whether NFS is named.</p></div></div>
+    </div>
+    <p class="note"><b>Also added:</b> an llms.txt summary file. It is a new, optional convention; no major AI search engine has confirmed using it yet, so treat it as low-cost, not a ranking factor.</p>
+  </section>
+
+  <section>
+    <span class="label">Phase 1</span>
+    <h2>Pages to launch with</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Page</th><th>Purpose</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Home</td><td>Main conversion page, structure above</td><td><span class="chip ok">Draft built</span></td></tr>
+          <tr><td>SEO &amp; AI Search</td><td>Flagship service page; targets SEO and ChatGPT/Bing visibility searches</td><td><span class="chip todo">Next</span></td></tr>
+          <tr><td>Performance Marketing (PPC)</td><td>Google &amp; Meta ads service page</td><td><span class="chip todo">Next</span></td></tr>
+          <tr><td>Social Media Marketing</td><td>Social &amp; creator service page</td><td><span class="chip todo">Next</span></td></tr>
+          <tr><td>About</td><td>Team, story, certifications; builds trust and entity signals</td><td><span class="chip todo">Next</span></td></tr>
+          <tr><td>Contact</td><td>Form, phone, WhatsApp, map</td><td><span class="chip todo">Next</span></td></tr>
+          <tr><td>Privacy &amp; Terms</td><td>Required for ads accounts and forms</td><td><span class="chip todo">Next</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="meta">Case studies page and remaining service pages follow once logos and case studies are provided.</p>
+  </section>
+
+  <section>
+    <span class="label">Needed from management</span>
+    <h2>Open inputs</h2>
+    <div class="checklist">
+      <div class="item"><span class="n">1</span><div><h3>Approve the section order</h3><p>Especially the new sections: problems, AI search band, packages and the mid-page audit band.</p></div></div>
+      <div class="item"><span class="n">2</span><div><h3>Package prices</h3><p>Starting-from prices in ₹ and $ for the packages section, or confirm we should leave pricing out.</p></div></div>
+      <div class="item"><span class="n">3</span><div><h3>Logos, reviews, case studies</h3><p>NFS-specific samples when ready; placeholders are in place until then.</p></div></div>
+      <div class="item"><span class="n">4</span><div><h3>Domain</h3><p>Final domain name, needed for Bing Webmaster Tools, the sitemap and schema.</p></div></div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+# NFS Digital — allow search engines and AI search crawlers
+User-agent: *
+Allow: /
+
+# Bing (its index feeds Bing Copilot and much of ChatGPT search)
+User-agent: Bingbot
+Allow: /
+
+# OpenAI: ChatGPT search results and browsing
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Other AI assistants
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.nfsdigital.example/sitemap.xml

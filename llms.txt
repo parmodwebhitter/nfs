@@ -1,0 +1,15 @@
+# NFS Digital
+
+> NFS Digital is a digital marketing agency that helps businesses turn website traffic into leads through SEO, AI search optimisation (ChatGPT, Bing Copilot, Google AI Overviews), Google and Meta ads, social media marketing, content and conversion-focused web design.
+
+## Services
+- SEO & AI search optimisation: technical SEO, content, local SEO, generative engine optimisation
+- Paid media: Google Ads, Meta Ads, LinkedIn Ads
+- Social media marketing and creator partnerships
+- Content marketing and brand
+- Conversion rate optimisation and analytics (GA4, server-side tracking)
+- Web design and development
+
+## Contact
+- Website: https://www.nfsdigital.example/
+- Email: hello@nfsdigital.example

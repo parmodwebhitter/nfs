@@ -1,0 +1,104 @@
+/* ==========================================================
+   Refinements round 2   (loaded last)
+   ========================================================== */
+
+/* ---------- floating WhatsApp / Call: icons at rest, equal pills on hover ---------- */
+.float-contact:hover .fc, .float-contact:focus-within .fc { width: 172px; max-width: 172px; justify-content: center; }
+.fc { width: 54px; justify-content: center; padding: 0; gap: 0; }
+.float-contact:hover .fc, .float-contact:focus-within .fc { gap: 10px; }
+.fc span { width: 0; overflow: hidden; transition: width .45s var(--ease); }
+.float-contact:hover .fc span, .float-contact:focus-within .fc span { width: auto; }
+@media (max-width: 640px) { .fc { width: auto; } .fc span { width: auto; } }
+
+/* ---------- navbar CTA: blue, deeper blue on hover ---------- */
+.header__cta .btn--dark { background: var(--lime); color: #fff; border-color: var(--lime); }
+.header__cta .btn--dark:hover { background: #1e3a8a; box-shadow: 0 12px 28px -12px rgba(29,78,216,.75); }
+
+/* ---------- banner progress bars: bigger ---------- */
+.hs__dots { gap: 12px; }
+.hs__dots button { width: 72px; height: 8px; border-radius: 8px; }
+@media (max-width: 640px) { .hs__dots button { width: 48px; height: 7px; } }
+
+/* ---------- section labels as pills, headings in brand blue ---------- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+  padding: 8px 16px; border-radius: 99px; background: #e8efff; color: #000;
+  letter-spacing: .14em; font-weight: 700; margin-bottom: 18px;
+}
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); }
+.eyebrow--light, .contact .eyebrow, .reviews .eyebrow, .ai-search .eyebrow { background: rgba(255,255,255,.16); color: #fff; }
+.eyebrow--light::before, .contact .eyebrow::before, .reviews .eyebrow::before, .ai-search .eyebrow::before { background: #fff; }
+.section-head--center .eyebrow { margin-inline: auto; }
+
+main section h2 { color: var(--lime); }
+.hero-slider h2, .hero-slider .hs__title { color: #000; }
+.ai-search h2, .audit-band h2, .reviews h2, .contact h2, .stats h2 { color: #fff; }
+
+/* ---------- icons: no flipping, premium colour change on hover ---------- */
+.card .ic, .card:hover .ic,
+.problem:hover .problem__ic,
+.exec__list li:hover > span,
+.socials a:hover,
+.brand:hover img,
+.review:hover .review__q { transform: none; }
+.card .ic, .problem__ic, .exec__list li > span, .ind-ic, .socials a, .partner__mark {
+  transition: background .35s ease, color .35s ease, box-shadow .35s ease;
+}
+.card:hover .ic, .problem:hover .problem__ic, .exec__list li:hover > span {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a); color: #fff;
+  box-shadow: 0 10px 24px -8px rgba(29,78,216,.65), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.card--xl:hover .ic { background: #fff; color: var(--lime); box-shadow: 0 10px 24px -8px rgba(0,0,0,.35); }
+.socials a:hover { background: linear-gradient(135deg, #3b82f6, #1e3a8a); color: #fff; box-shadow: 0 10px 22px -8px rgba(29,78,216,.6); transform: none; }
+.flip:hover .ind-ic { box-shadow: 0 0 0 6px color-mix(in srgb, var(--c) 18%, transparent); }
+
+/* ---------- plan cards: no flip, show the detail side directly, sparkle on hover ---------- */
+.plan__grid { counter-reset: plan; }
+.plan__grid .flip { counter-increment: plan; min-height: 250px; }
+.plan__grid .flip:hover .flipcard, .plan__grid .flip:focus-within .flipcard { transform: none; }
+.plan__grid .flipcard__face:first-child { display: none; }
+.plan__grid .flipcard__back {
+  position: relative; inset: auto; height: 100%; transform: none; overflow: hidden; isolation: isolate;
+  justify-content: flex-start; gap: 10px; padding: 26px 22px;
+  transition: transform .45s var(--ease), box-shadow .45s;
+}
+.plan__grid .flipcard__back::before {
+  content: "0" counter(plan); font-family: var(--display); font-size: 2.4rem; line-height: 1; color: rgba(255,255,255,.35);
+}
+/* light burst from the centre */
+.plan__grid .flipcard__back::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 260%; aspect-ratio: 1; z-index: -1; pointer-events: none;
+  transform: translate(-50%, -50%) scale(0); border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.55) 0 2px, transparent 3px) 0 0 / 22px 22px,
+    radial-gradient(circle, rgba(147,197,253,.55), rgba(147,197,253,0) 55%);
+  opacity: 0; transition: transform .7s var(--ease), opacity .7s;
+}
+.plan__grid .flip:hover .flipcard__back { transform: translateY(-6px); box-shadow: 0 30px 50px -26px rgba(20,45,130,.75); }
+.plan__grid .flip:hover .flipcard__back::after { transform: translate(-50%, -50%) scale(1); opacity: 1; animation: twinkle 1.6s ease-in-out .5s infinite; }
+@keyframes twinkle { 50% { opacity: .55; } }
+.plan__grid .flipcard__back h3 { color: #fff; }
+
+/* ---------- why choose us: image stays beside the text, compact 2x2 points ---------- */
+.exec__inner { align-items: start; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; }
+.exec__media { position: sticky; top: 110px; }
+.exec__media img { aspect-ratio: 560 / 420; }
+.exec__inner > div:last-child > p { margin-bottom: 24px; }
+.exec__list { grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+.exec__list li { flex-direction: column; gap: 10px; padding: 18px; }
+.exec__list b { font-size: 1.02rem; }
+.exec__list p { font-size: .9rem; line-height: 1.5; }
+@media (max-width: 1100px) {
+  .exec__media { position: static; }
+}
+@media (max-width: 640px) {
+  .exec__list { grid-template-columns: 1fr; }
+}
+
+/* why choose us, take 2: image beside the intro, points in one row underneath */
+.exec__inner { align-items: center; }
+.exec__media { position: static; }
+.exec__inner > div:last-child > p { font-size: 1.08rem; }
+.exec__list { grid-template-columns: repeat(4, 1fr); margin: 48px 0 0; }
+@media (max-width: 1100px) { .exec__list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .exec__list { grid-template-columns: 1fr; } }

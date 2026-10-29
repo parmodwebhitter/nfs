@@ -3,17 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Momentra — Growth Marketing Studio</title>
-  <meta name="description" content="Momentra is a performance-first digital marketing studio. SEO, paid media, social, content and CRO that compound into revenue." />
+  <title>NFS Digital | Digital Marketing Agency for SEO, PPC &amp; Social Media</title>
+  <meta name="description" content="NFS Digital is a results-driven digital marketing agency offering SEO, AI search (ChatGPT &amp; Bing) optimisation, Google &amp; Meta ads, social media and web design. Get a free growth audit." />
+  <link rel="canonical" href="https://www.nfsdigital.example/" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  
-  
-  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NFS Digital | Digital Marketing Agency" />
+  <meta property="og:description" content="SEO, AI search, paid ads, social media and web design that turn traffic into leads." />
+  <meta property="og:url" content="https://www.nfsdigital.example/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Structured data: helps Google, Bing and ChatGPT search understand who we are -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.nfsdigital.example/#org",
+        "name": "NFS Digital",
+        "url": "https://www.nfsdigital.example/",
+        "logo": "https://www.nfsdigital.example/assets/logo.svg",
+        "description": "Digital marketing agency offering SEO, AI search optimisation, PPC, social media marketing, content and web design.",
+        "telephone": "+91-00000-00000",
+        "email": "hello@nfsdigital.example",
+        "areaServed": ["IN", "US", "GB", "AE", "AU"],
+        "knowsAbout": ["Search engine optimisation", "Generative engine optimisation", "Pay-per-click advertising", "Social media marketing", "Content marketing", "Conversion rate optimisation", "Web design"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How soon will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Paid media and CRO typically move numbers within 2–4 weeks. SEO compounds over 3–6 months, but we prioritise quick technical wins so you see progress in month one." } },
+          { "@type": "Question", "name": "Do you lock clients into long contracts?", "acceptedAnswer": { "@type": "Answer", "text": "No. After the initial 90-day sprint, every engagement is month-to-month. We'd rather earn your renewal than enforce it." } },
+          { "@type": "Question", "name": "What budgets do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "Retainers start at $1,500/month for a single channel. We'll recommend the spend that fits your goals — and tell you honestly if a channel isn't worth it yet." } },
+          { "@type": "Question", "name": "Who will actually work on my account?", "acceptedAnswer": { "@type": "Answer", "text": "A dedicated growth lead plus channel specialists with 5+ years' experience. You'll have a shared Slack channel and a live dashboard from day one." } },
+          { "@type": "Question", "name": "Do you work with businesses outside India?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — around 60% of our clients are in the US, UK, UAE and Australia. We run overlapping hours across time zones." } }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/theme.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/fixes.css" />
   <link rel="stylesheet" href="css/content.css" />
+  <link rel="stylesheet" href="css/cro.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/polish.css" />
+  <link rel="stylesheet" href="css/refine.css" />
+  <link rel="stylesheet" href="css/calm.css" />
+  <link rel="stylesheet" href="css/v2.css" />
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -58,20 +97,22 @@
   <!-- ================= HEADER ================= -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="#top" class="brand" aria-label="Momentra home">
+      <a href="#top" class="brand" aria-label="NFS Digital home">
         <img src="assets/logo.svg" alt="" width="36" height="36" />
-        <span>Momentra</span>
+        <span>NFS Digital</span>
       </a>
       <nav class="nav" aria-label="Main">
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#work">Work</a>
+        <a href="#packages">Pricing</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <div class="header__cta">
-        <a href="tel:+10000000000" class="header__phone"><svg><use href="#i-phone"/></svg> Talk to a strategist</a>
-        <a href="#contact" class="btn btn--dark">Get a free audit <svg><use href="#i-arrow"/></svg></a>
+        <a href="tel:+910000000000" class="header__phone"><svg><use href="#i-phone"/></svg> Talk to a strategist</a>
+        <a href="contact.html" class="btn btn--dark">Get a free audit <svg><use href="#i-arrow"/></svg></a>
       </div>
       <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     </div>
@@ -79,9 +120,10 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#work">Work</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#packages">Pricing</a>
+        <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn--lime">Get a free audit</a>
+      <a href="contact.html" class="btn btn--lime">Get a free audit</a>
     </div>
   </header>
 
@@ -96,7 +138,7 @@
               <h1 class="hs__title">Rank higher.<br/><em>Get found first.</em></h1>
               <p class="hs__lead">Technical SEO, content and AI-search optimisation that put your brand at the top of Google, ChatGPT and every search your buyers make.</p>
               <div class="hero__actions">
-                <a href="#contact" class="btn btn--lime btn--lg">Get a free SEO audit <svg><use href="#i-arrow"/></svg></a>
+                <a href="contact.html" class="btn btn--lime btn--lg">Get a free SEO audit <svg><use href="#i-arrow"/></svg></a>
                 <a href="#services" class="btn btn--ghost btn--lg">Explore services</a>
               </div>
             </div>
@@ -111,7 +153,7 @@
               <h2 class="hs__title">Turn followers<br/><em>into customers.</em></h2>
               <p class="hs__lead">Scroll-stopping content, creator partnerships and community management that grow an audience you can actually sell to.</p>
               <div class="hero__actions">
-                <a href="#contact" class="btn btn--lime btn--lg">Plan my social strategy <svg><use href="#i-arrow"/></svg></a>
+                <a href="contact.html" class="btn btn--lime btn--lg">Plan my social strategy <svg><use href="#i-arrow"/></svg></a>
                 <a href="#work" class="btn btn--ghost btn--lg">See results</a>
               </div>
             </div>
@@ -126,7 +168,7 @@
               <h2 class="hs__title">Every rupee,<br/><em>working harder.</em></h2>
               <p class="hs__lead">Google, Meta and LinkedIn campaigns built around profit — tested weekly, reported transparently, scaled only when they pay back.</p>
               <div class="hero__actions">
-                <a href="#contact" class="btn btn--lime btn--lg">Launch my campaign <svg><use href="#i-arrow"/></svg></a>
+                <a href="contact.html" class="btn btn--lime btn--lg">Launch my campaign <svg><use href="#i-arrow"/></svg></a>
                 <a href="#process" class="btn btn--ghost btn--lg">How we work</a>
               </div>
             </div>
@@ -141,7 +183,28 @@
           <button aria-label="Show slide 2"><i></i></button>
           <button aria-label="Show slide 3"><i></i></button>
         </div>
-        <div class="hs__count"><b>01</b> / 03</div>
+      </div>
+
+      <!-- inline audit form: stays put while slides rotate -->
+      <div class="container">
+        <form class="audit-form hero-audit" novalidate>
+          <div class="audit-form__intro">
+            <b>Free website &amp; SEO audit</b>
+            <span>Your top 5 growth opportunities, sent within 48 hours.</span>
+          </div>
+          <label class="sr-only" for="ha-site">Your website</label>
+          <input id="ha-site" name="site" type="text" placeholder="yourwebsite.com" required />
+          <label class="sr-only" for="ha-email">Work email</label>
+          <input id="ha-email" name="email" type="email" placeholder="you@company.com" required />
+          <button type="submit" class="btn btn--lime">Get my free audit <svg><use href="#i-arrow"/></svg></button>
+          <p class="audit-form__msg" role="status"></p>
+        </form>
+        <div class="hero-proof">
+          <span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span><b>4.9/5</b> from 400+ client reviews</span>
+          <span class="dot"></span><span>No lock-in contracts</span>
+          <span class="dot"></span><span>Reply within 24 hours</span>
+        </div>
       </div>
       <button class="hs__side hs__side--prev" data-hs="-1" aria-label="Previous slide"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
       <button class="hs__side hs__side--next" data-hs="1" aria-label="Next slide"><svg><use href="#i-arrow"/></svg></button>
@@ -166,11 +229,49 @@
       </div>
     </section>
 
+    <!-- ================= PROBLEMS WE SOLVE ================= -->
+    <section class="problems">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow reveal">Sound familiar?</span>
+          <h2 class="reveal" data-delay="1">The problems we fix every day.</h2>
+          <p class="reveal" data-delay="2">Most businesses come to us with one of these. Pick the one that sounds like you and see how we solve it.</p>
+        </div>
+        <div class="problem-grid">
+          <a href="#services" class="problem reveal flip-up">
+            <span class="problem__ic"><svg><use href="#i-funnel"/></svg></span>
+            <h3>"We get traffic, but no leads."</h3>
+            <p>Visitors arrive and leave. We fix the messaging, landing pages and forms so more of them get in touch.</p>
+            <span class="problem__fix">Fix: CRO &amp; landing pages <svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#services" class="problem reveal flip-up" data-delay="1">
+            <span class="problem__ic"><svg><use href="#i-target"/></svg></span>
+            <h3>"Our ads spend money, not make it."</h3>
+            <p>Clicks without sales. We rebuild campaigns around profit, cut wasted spend and test new creatives every week.</p>
+            <span class="problem__fix">Fix: Google &amp; Meta ads <svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#ai-search" class="problem reveal flip-up" data-delay="2">
+            <span class="problem__ic"><svg><use href="#i-search"/></svg></span>
+            <h3>"Nobody finds us on Google or ChatGPT."</h3>
+            <p>Competitors show up first. We get you ranking on Google and Bing, and recommended in AI answers.</p>
+            <span class="problem__fix">Fix: SEO &amp; AI search <svg><use href="#i-arrow"/></svg></span>
+          </a>
+          <a href="#services" class="problem reveal flip-up" data-delay="3">
+            <span class="problem__ic"><svg><use href="#i-share"/></svg></span>
+            <h3>"Social media isn't bringing business."</h3>
+            <p>Posting with no results. We plan content and campaigns that turn followers into enquiries.</p>
+            <span class="problem__fix">Fix: Social media marketing <svg><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= ABOUT ================= -->
     <section class="about">
       <div class="container about__inner">
         <div class="about__media reveal flip-up">
-          <img class="about__img" src="assets/img/about-team.svg" alt="Illustration of the Momentra team planning a campaign around a growth dashboard" />
+          <!-- Photo: Unsplash (free licence) https://unsplash.com/photos/gMsnXqILjp4 . Replace with a real NFS team photo when available. -->
+          <img class="about__img about__img--photo" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=1200&amp;h=1000&amp;q=80" width="1200" height="1000" loading="lazy" alt="Marketing strategist presenting a campaign plan to the team around a meeting table" />
           <div class="about__badge">
           <div class="flipcard">
             <div class="flipcard__face">
@@ -187,9 +288,9 @@
         <div>
           <span class="eyebrow reveal">Who we are</span>
           <h2 class="reveal" data-delay="1">A full-suite agency that treats your growth like its own.</h2>
-          <p class="reveal" data-delay="2">Momentra brings search, social, paid media and creative under one roof. Instead of juggling five vendors, you get one accountable team focused on a single outcome: turning your brand into a dependable sales engine.</p>
+          <p class="reveal" data-delay="2">NFS Digital brings search, social, paid media and creative under one roof. Instead of juggling five vendors, you get one accountable team focused on a single outcome: turning your brand into a dependable sales engine.</p>
           <p class="reveal" data-delay="3">We start by understanding your market, your margins and your customers — then build a plan that compounds month after month, with reporting you can read in two minutes.</p>
-          <a href="#contact" class="btn btn--dark reveal" data-delay="4">More about us <svg><use href="#i-arrow"/></svg></a>
+          <a href="contact.html" class="btn btn--dark reveal" data-delay="4">More about us <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
@@ -239,14 +340,16 @@
           <span class="eyebrow reveal">Why choose us</span>
           <h2 class="reveal" data-delay="1">From big ideas to flawless execution.</h2>
           <p class="reveal" data-delay="2">Strategy is only as good as the team that ships it. Our specialists plan creatively and execute with discipline — then keep refining, so results get better every month instead of plateauing.</p>
+          <a href="contact.html" class="btn btn--lime reveal" data-delay="3">Talk to our team <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="container">
           <ul class="exec__list">
             <li class="reveal flip-up"><span><svg><use href="#i-check"/></svg></span><div><b>Senior specialists only</b><p>Every account is run by people with 5+ years in their channel — no interns learning on your budget.</p></div></li>
             <li class="reveal flip-up" data-delay="1"><span><svg><use href="#i-check"/></svg></span><div><b>Weekly sprints, monthly reviews</b><p>Small improvements ship every week. Every month we sit down and decide what to scale, fix or cut.</p></div></li>
             <li class="reveal flip-up" data-delay="2"><span><svg><use href="#i-check"/></svg></span><div><b>One live dashboard</b><p>Spend, leads and revenue from every channel in one place, updated daily and readable in two minutes.</p></div></li>
             <li class="reveal flip-up" data-delay="3"><span><svg><use href="#i-check"/></svg></span><div><b>No long lock-ins</b><p>After the first 90 days, you stay because it's working — not because a contract says so.</p></div></li>
           </ul>
-          <a href="#contact" class="btn btn--lime reveal" data-delay="3">Talk to our team <svg><use href="#i-arrow"/></svg></a>
-        </div>
       </div>
       <div class="container exec__partners">
         <p class="exec__partners-title reveal">Certified and trusted by the platforms we work on</p>
@@ -272,98 +375,121 @@
     </section>
 
 
-    <!-- ================= INTRO / MANIFESTO ================= -->
-    <section class="manifesto">
-      <div class="container">
-        <p class="manifesto__text split-words">
-          Most agencies sell you activity. We sell outcomes — pipeline, revenue and customers that stay. Every channel we touch is measured against one question: <em>did it make you money?</em>
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= SERVICES (BENTO) ================= -->
+    <!-- ================= SERVICES (CAPABILITIES) ================= -->
     <section class="services" id="services">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow reveal">01 — Capabilities</span>
-            <h2 class="reveal" data-delay="1">One team. Every channel<br/>that moves revenue.</h2>
+            <span class="eyebrow reveal">Capabilities</span>
+            <h2 class="reveal" data-delay="1">Pick the result you want.<br/>We'll handle the channel.</h2>
           </div>
-          <p class="reveal" data-delay="2">Pick a single service or let us run the whole growth stack. Either way you get senior specialists, not juniors learning on your budget.</p>
+          <p class="reveal" data-delay="2">Every service is run by a specialist with 5+ years in that channel. Each card shows what you get and how soon you can expect to see results.</p>
         </div>
 
-        <div class="bento">
-          <article class="card card--xl reveal tilt">
-            <div class="card__top">
-              <span class="ic ic--lime"><svg><use href="#i-search"/></svg></span>
-              <span class="tag">Most requested</span>
-            </div>
+        <div class="svc-grid">
+          <a href="contact.html?service=seo" class="svc reveal">
+            <span class="svc__ic"><svg><use href="#i-search"/></svg></span>
             <h3>SEO &amp; AI Search</h3>
-            <p>Technical audits, topical authority and content that ranks on Google — and gets cited by ChatGPT, Perplexity and AI Overviews.</p>
-            <ul class="checks">
-              <li><svg><use href="#i-check"/></svg> Technical &amp; Core Web Vitals</li>
-              <li><svg><use href="#i-check"/></svg> Generative engine optimisation</li>
-              <li><svg><use href="#i-check"/></svg> Local SEO &amp; Google Business</li>
-            </ul>
-            <div class="serp" aria-hidden="true">
-              <div class="serp__bar"><svg><use href="#i-search"/></svg><span class="typed" data-text="best running shoes for flat feet"></span></div>
-              <div class="serp__row serp__row--win"><b>#1</b><span>yourbrand.com › guide</span><em>↑ 14</em></div>
-              <div class="serp__row"><b>#2</b><span>competitor.com</span></div>
-              <div class="serp__row"><b>#3</b><span>marketplace.com</span></div>
-            </div>
-            <a href="#contact" class="card__link">Explore SEO <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
-
-          <article class="card card--dark reveal tilt" data-delay="1">
-            <span class="ic ic--coral"><svg><use href="#i-target"/></svg></span>
-            <h3>Paid Media</h3>
-            <p>Google, Meta, LinkedIn and TikTok ads engineered around profit, not clicks.</p>
-            <div class="mini-bars" aria-hidden="true"><i style="--h:30%"></i><i style="--h:45%"></i><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:70%"></i><i style="--h:92%"></i></div>
-            <a href="#contact" class="card__link">Explore PPC <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
-
-          <article class="card reveal tilt" data-delay="2">
-            <span class="ic ic--violet"><svg><use href="#i-share"/></svg></span>
-            <h3>Social &amp; Creators</h3>
-            <p>Thumb-stopping content calendars, community management and creator partnerships.</p>
-            <a href="#contact" class="card__link">Explore social <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
-
-          <article class="card reveal tilt">
-            <span class="ic ic--sky"><svg><use href="#i-pen"/></svg></span>
-            <h3>Content &amp; Brand</h3>
-            <p>Stories, video and copy that build trust before the first sales call.</p>
-            <a href="#contact" class="card__link">Explore content <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
-
-          <article class="card reveal tilt" data-delay="1">
-            <span class="ic ic--amber"><svg><use href="#i-cart"/></svg></span>
+            <p class="svc__for">For businesses that want steady leads from Google, Bing and ChatGPT without paying per click.</p>
+            <ul><li>Technical fixes &amp; site speed</li><li>Keyword-led content every month</li><li>Google Business Profile &amp; local SEO</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 3–6 months</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=ppc" class="svc reveal" data-delay="1">
+            <span class="svc__ic"><svg><use href="#i-target"/></svg></span>
+            <h3>Google &amp; Meta Ads</h3>
+            <p class="svc__for">For businesses that need enquiries this month and want every rupee of ad spend accounted for.</p>
+            <ul><li>Search, Shopping &amp; Performance Max</li><li>Facebook &amp; Instagram campaigns</li><li>Weekly testing &amp; spend reports</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 2–4 weeks</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=social" class="svc reveal" data-delay="2">
+            <span class="svc__ic"><svg><use href="#i-share"/></svg></span>
+            <h3>Social Media Marketing</h3>
+            <p class="svc__for">For brands that post regularly but don't see enquiries or sales coming from it.</p>
+            <ul><li>Monthly content calendar</li><li>Reels, carousels &amp; creatives</li><li>Community &amp; DM management</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 1–3 months</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=web" class="svc reveal" data-delay="3">
+            <span class="svc__ic"><svg><use href="#i-code"/></svg></span>
+            <h3>Website Design</h3>
+            <p class="svc__for">For businesses whose website is slow, outdated or simply doesn't turn visitors into calls.</p>
+            <ul><li>Fast, mobile-first design</li><li>Landing pages built to convert</li><li>SEO-ready from day one</li></ul>
+            <div class="svc__foot"><span class="svc__time">Live in 3–6 weeks</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=content" class="svc reveal">
+            <span class="svc__ic"><svg><use href="#i-pen"/></svg></span>
+            <h3>Content Marketing</h3>
+            <p class="svc__for">For businesses that need blogs, videos and case studies that build trust before the sales call.</p>
+            <ul><li>SEO blogs &amp; buyer guides</li><li>Video scripts &amp; editing</li><li>Case studies &amp; brochures</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 2–4 months</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=ecom" class="svc reveal" data-delay="1">
+            <span class="svc__ic"><svg><use href="#i-cart"/></svg></span>
             <h3>E-commerce Growth</h3>
-            <p>Shopify &amp; marketplace growth: feeds, shopping ads, retention flows.</p>
-            <a href="#contact" class="card__link">Explore e-com <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
+            <p class="svc__for">For online stores that want more orders, bigger baskets and customers who come back.</p>
+            <ul><li>Shopping ads &amp; product feeds</li><li>Amazon &amp; marketplace listings</li><li>Email &amp; WhatsApp retention flows</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 4–8 weeks</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=cro" class="svc reveal" data-delay="2">
+            <span class="svc__ic"><svg><use href="#i-funnel"/></svg></span>
+            <h3>Conversion &amp; Analytics</h3>
+            <p class="svc__for">For businesses getting traffic but not enough leads, or unsure which channel actually works.</p>
+            <ul><li>GA4 &amp; conversion tracking</li><li>Landing page A/B tests</li><li>Monthly lead-source report</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 4–6 weeks</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+          <a href="contact.html?service=orm" class="svc reveal" data-delay="3">
+            <span class="svc__ic"><svg><use href="#i-shield"/></svg></span>
+            <h3>Reputation Management</h3>
+            <p class="svc__for">For businesses losing customers to bad reviews or a weak first page on Google.</p>
+            <ul><li>Google review generation</li><li>Review monitoring &amp; replies</li><li>Negative result suppression</li></ul>
+            <div class="svc__foot"><span class="svc__time">Results in 1–3 months</span><span class="svc__more">Learn more <svg><use href="#i-arrow"/></svg></span></div>
+          </a>
+        </div>
 
-          <article class="card reveal tilt" data-delay="2">
-            <span class="ic ic--lime"><svg><use href="#i-funnel"/></svg></span>
-            <h3>CRO &amp; Analytics</h3>
-            <p>GA4, server-side tracking and A/B tests that squeeze more from every visit.</p>
-            <a href="#contact" class="card__link">Explore CRO <svg><use href="#i-arrow-ne"/></svg></a>
-          </article>
+        <div class="svc-help reveal">
+          <div><b>Not sure which service you need?</b><span>Tell us your goal and we'll recommend the right mix in a free 20-minute call.</span></div>
+          <a href="contact.html" class="btn btn--lime">Get a free recommendation <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
 
-          <article class="card card--wide reveal tilt">
-            <div class="card--wide__row">
-              <div>
-                <span class="ic ic--coral"><svg><use href="#i-shield"/></svg></span>
-                <h3>Reputation Management</h3>
-                <p>Review generation, sentiment monitoring and crisis response — so the first page about you is the one you'd write.</p>
-              </div>
-              <div>
-                <span class="ic ic--sky"><svg><use href="#i-code"/></svg></span>
-                <h3>Web Design &amp; Dev</h3>
-                <p>Fast, conversion-led websites and landing pages built to rank and to sell.</p>
-              </div>
-            </div>
-          </article>
+    <!-- ================= AI SEARCH BAND ================= -->
+    <section class="ai-search" id="ai-search">
+      <div class="container ai-search__inner">
+        <div class="ai-search__copy">
+          <span class="eyebrow eyebrow--light reveal">AI search optimisation</span>
+          <h2 class="reveal" data-delay="1">Your buyers now ask ChatGPT. Is your brand in the answer?</h2>
+          <p class="reveal" data-delay="2">People increasingly ask AI assistants which agency, clinic or product to choose. We track the questions your buyers ask, check which assistants mention you, and improve your content, listings and reviews until you show up.</p>
+          <ul class="ai-search__list">
+            <li class="reveal"><svg><use href="#i-check"/></svg><div><b>Indexed on Bing and AI crawlers</b><span>ChatGPT search leans heavily on Bing, so we set up Bing Webmaster Tools, IndexNow and crawler access.</span></div></li>
+            <li class="reveal" data-delay="1"><svg><use href="#i-check"/></svg><div><b>Content AI tools can quote</b><span>Clear questions, direct answers, comparison tables and real figures on your pages.</span></div></li>
+            <li class="reveal" data-delay="2"><svg><use href="#i-check"/></svg><div><b>Mentions on trusted sites</b><span>Reviews, directories and articles that AI assistants rely on as sources.</span></div></li>
+          </ul>
+          <a href="contact.html?service=ai" class="btn btn--white reveal" data-delay="3">Get my AI visibility check <svg><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="aiv reveal" data-delay="1">
+          <div class="aiv__head">
+            <div><b>AI Visibility Report</b><small>Sample client · Dental clinic, Pune · Sep 2026</small></div>
+            <span class="aiv__tag">Sample</span>
+          </div>
+          <div class="aiv__score">
+            <svg viewBox="0 0 120 120" class="aiv__ring" aria-hidden="true">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#e6edfb" stroke-width="12"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#1d4ed8" stroke-width="12" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="182" transform="rotate(-90 60 60)"/>
+            </svg>
+            <div class="aiv__scoretext"><strong>42%</strong><span>of tracked questions mention the brand</span><em>▲ from 8% in June</em></div>
+          </div>
+          <div class="aiv__table" role="table" aria-label="Brand mentions by AI assistant">
+            <div class="aiv__row aiv__row--head" role="row"><span role="columnheader">Question buyers ask</span><span role="columnheader">ChatGPT</span><span role="columnheader">Perplexity</span><span role="columnheader">Gemini</span><span role="columnheader">Copilot</span></div>
+            <div class="aiv__row" role="row"><span role="cell">Best dental clinic in Pune for implants</span><span class="y" role="cell">#1</span><span class="y" role="cell">#2</span><span class="y" role="cell">#3</span><span class="y" role="cell">#1</span></div>
+            <div class="aiv__row" role="row"><span role="cell">Invisalign cost in Pune</span><span class="y" role="cell">#2</span><span class="y" role="cell">#1</span><span class="n" role="cell">–</span><span class="y" role="cell">#2</span></div>
+            <div class="aiv__row" role="row"><span role="cell">Painless root canal near Baner</span><span class="y" role="cell">#1</span><span class="n" role="cell">–</span><span class="y" role="cell">#2</span><span class="n" role="cell">–</span></div>
+            <div class="aiv__row" role="row"><span role="cell">Dentist open on Sunday Pune</span><span class="n" role="cell">–</span><span class="y" role="cell">#3</span><span class="n" role="cell">–</span><span class="y" role="cell">#4</span></div>
+          </div>
+          <div class="aiv__trend">
+            <span>Mentions per month</span>
+            <div class="aiv__bars" aria-hidden="true"><i style="--v:12%"><b>Jun</b></i><i style="--v:28%"><b>Jul</b></i><i style="--v:55%"><b>Aug</b></i><i style="--v:84%"><b>Sep</b></i></div>
+          </div>
         </div>
       </div>
     </section>
@@ -412,7 +538,7 @@
               <li>SEO-ready structure, schema and Core Web Vitals</li>
               <li>Easy-to-edit CMS so your team can update content</li>
             </ul>
-            <a href="#contact" class="btn btn--dark reveal" data-delay="4">Start your project <svg><use href="#i-arrow"/></svg></a>
+            <a href="contact.html" class="btn btn--dark reveal" data-delay="4">Start your project <svg><use href="#i-arrow"/></svg></a>
           </div>
         </div>
       </div>
@@ -432,7 +558,7 @@
     <section class="process" id="process">
       <div class="container process__inner">
         <div class="process__sticky">
-          <span class="eyebrow reveal">02 — How we work</span>
+          <span class="eyebrow reveal">How we work</span>
           <h2 class="reveal" data-delay="1">A 90-day sprint<br/>from audit to <span class="hl">ROI</span>.</h2>
           <p class="reveal" data-delay="2">No 12-month lock-ins and no black boxes. You see the plan, the spend and the numbers — every single week.</p>
           <div class="process__meter reveal" data-delay="3"><i></i></div>
@@ -459,40 +585,89 @@
     </section>
 
     <!-- ================= CASE STUDIES ================= -->
+    <!-- Placeholder case studies until management shares real ones. Photos: Unsplash (free licence). -->
     <section class="work" id="work">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow reveal">03 — Selected work</span>
-            <h2 class="reveal" data-delay="1">Numbers our clients<br/>brag about.</h2>
+            <span class="eyebrow reveal">Selected work</span>
+            <h2 class="reveal" data-delay="1">Real problems. Measured results.</h2>
           </div>
-          <div class="work__nav reveal" data-delay="2">
-            <button class="round-btn" data-dir="-1" aria-label="Previous case study"><svg style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
-            <button class="round-btn" data-dir="1" aria-label="Next case study"><svg><use href="#i-arrow"/></svg></button>
+          <p class="reveal" data-delay="2">A few recent projects, with the starting point, what we changed and what it delivered.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="wk wk--feature reveal">
+            <div class="wk__img"><img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?auto=format&amp;fit=crop&amp;w=1200&amp;h=760&amp;q=80" width="1200" height="760" loading="lazy" alt="Skincare products arranged on a pink surface" /><span class="wk__tag">SEO · Content</span></div>
+            <div class="wk__body">
+              <small>Lumora Skincare · D2C e-commerce</small>
+              <h3>From page 4 to page 1: organic revenue up 412% in 7 months</h3>
+              <p><b>Challenge:</b> great products, but 90% of sales came from paid ads and costs kept rising. <b>What we did:</b> rebuilt the blog around buyer questions, fixed site speed and earned links from beauty publications.</p>
+              <div class="wk__stats">
+                <div><strong>+412%</strong><span>organic revenue</span></div>
+                <div><strong>380</strong><span>page-one keywords</span></div>
+                <div><strong>-34%</strong><span>blended ad cost</span></div>
+              </div>
+              <div class="wk__chart" aria-hidden="true">
+                <svg viewBox="0 0 400 110" preserveAspectRatio="none">
+                  <defs><linearGradient id="wkfill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1d4ed8" stop-opacity=".25"/><stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0 100 L57 96 L114 92 L171 80 L228 62 L285 44 L342 26 L400 12 V110 H0Z" fill="url(#wkfill)"/>
+                  <path d="M0 100 L57 96 L114 92 L171 80 L228 62 L285 44 L342 26 L400 12" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="400" cy="12" r="5" fill="#1d4ed8"/>
+                </svg>
+                <div class="wk__axis"><span>Month 1</span><span>Organic revenue</span><span>Month 7</span></div>
+              </div>
+            </div>
+          </article>
+
+          <div class="wk-list">
+            <article class="wk wk--row reveal" data-delay="1">
+              <div class="wk__img"><img src="https://images.unsplash.com/photo-1645651964715-d200ce0939cc?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" width="400" height="400" loading="lazy" alt="Power tools on a workbench" /></div>
+              <div class="wk__body">
+                <small>Kraftwell Tools · E-commerce</small>
+                <h3>ROAS from 2.8x to 7.2x on the same budget</h3>
+                <p>Restructured Google Shopping and Meta ads around product margin instead of revenue.</p>
+                <div class="wk__chips"><span><b>7.2x</b> ROAS</span><span><b>+61%</b> orders</span></div>
+              </div>
+            </article>
+            <article class="wk wk--row reveal" data-delay="2">
+              <div class="wk__img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" width="400" height="400" loading="lazy" alt="Analytics dashboard on a laptop screen" /></div>
+              <div class="wk__body">
+                <small>Quantix · B2B SaaS</small>
+                <h3>140 sales demos a quarter from LinkedIn</h3>
+                <p>Account-based LinkedIn campaigns aimed at 600 target companies, plus comparison landing pages.</p>
+                <div class="wk__chips"><span><b>-58%</b> cost per demo</span><span><b>140</b> demos / qtr</span></div>
+              </div>
+            </article>
+            <article class="wk wk--row reveal" data-delay="3">
+              <div class="wk__img"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" width="400" height="400" loading="lazy" alt="Modern white house under a blue sky" /></div>
+              <div class="wk__body">
+                <small>Haven Homes · Real estate</small>
+                <h3>3x site-visit enquiries with property reels</h3>
+                <p>Weekly walkthrough reels and lead-form ads for two new residential projects.</p>
+                <div class="wk__chips"><span><b>3x</b> enquiries</span><span><b>2.4M</b> monthly reach</span></div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-      <div class="cases" tabindex="0">
-        <article class="case reveal" style="--c1:#d7192b;--c2:#3a060c">
-          <div class="case__art"><img src="assets/clients/lumora.svg" alt="" /><span class="case__big">+412%</span><span class="case__label">organic revenue</span></div>
-          <div class="case__body"><span class="tag">SEO · Content</span><h3>Lumora Skincare</h3><p>Rebuilt their content hub around buyer intent and won 380 page-one keywords in 7 months.</p><div class="case__meta"><span><b>380</b> page-one keywords</span><span><b>7</b> months</span></div></div>
-        </article>
-        <article class="case reveal" data-delay="1" style="--c1:#d7192b;--c2:#3a060c">
-          <div class="case__art"><img src="assets/clients/kraftwell.svg" alt="" /><span class="case__big">7.2x</span><span class="case__label">blended ROAS</span></div>
-          <div class="case__body"><span class="tag">Paid Media · CRO</span><h3>Kraftwell Tools</h3><p>Restructured Google Shopping and Meta Advantage+ with profit-based bidding.</p><div class="case__meta"><span><b>2.8x → 7.2x</b> ROAS</span><span><b>Same</b> ad spend</span></div></div>
-        </article>
-        <article class="case reveal" data-delay="2" style="--c1:#d7192b;--c2:#3a060c">
-          <div class="case__art"><img src="assets/clients/quantix.svg" alt="" /><span class="case__big">-58%</span><span class="case__label">cost per SQL</span></div>
-          <div class="case__body"><span class="tag">LinkedIn · ABM</span><h3>Quantix SaaS</h3><p>Account-based LinkedIn programme feeding 140 sales-qualified demos a quarter.</p><div class="case__meta"><span><b>140</b> demos / quarter</span><span><b>-58%</b> cost per SQL</span></div></div>
-        </article>
-        <article class="case reveal" data-delay="3" style="--c1:#d7192b;--c2:#3a060c">
-          <div class="case__art"><img src="assets/clients/havenhomes.svg" alt="" /><span class="case__big">2.4M</span><span class="case__label">social reach / mo</span></div>
-          <div class="case__body"><span class="tag">Social · Creators</span><h3>Haven Homes</h3><p>Creator-led reels strategy that turned property tours into a lead machine.</p><div class="case__meta"><span><b>2.4M</b> monthly reach</span><span><b>3x</b> enquiries</span></div></div>
-        </article>
-        <article class="case reveal" style="--c1:#d7192b;--c2:#3a060c">
-          <div class="case__art"><img src="assets/clients/orbitly.svg" alt="" /><span class="case__big">+186%</span><span class="case__label">trial sign-ups</span></div>
-          <div class="case__body"><span class="tag">CRO · Analytics</span><h3>Orbitly</h3><p>42 landing page experiments in one quarter, with server-side tracking to prove it.</p><div class="case__meta"><span><b>42</b> experiments</span><span><b>+186%</b> sign-ups</span></div></div>
-        </article>
+    </section>
+
+    <!-- ================= MID-PAGE AUDIT BAND ================= -->
+    <section class="audit-band">
+      <div class="container audit-band__inner">
+        <div class="audit-band__copy reveal">
+          <h2>Find out what's holding your website back.</h2>
+          <p>Get a free video audit of your SEO, ads and conversion rate, with the 5 changes that will bring you more leads.</p>
+        </div>
+        <form class="audit-form audit-form--band reveal" data-delay="1" novalidate>
+          <label class="sr-only" for="ab-site">Your website</label>
+          <input id="ab-site" name="site" type="text" placeholder="yourwebsite.com" required />
+          <label class="sr-only" for="ab-email">Work email</label>
+          <input id="ab-email" name="email" type="email" placeholder="you@company.com" required />
+          <button type="submit" class="btn btn--white">Get free audit <svg><use href="#i-arrow"/></svg></button>
+          <p class="audit-form__msg" role="status"></p>
+        </form>
       </div>
     </section>
 
@@ -502,64 +677,107 @@
         <div class="section-head">
           <div>
             <span class="eyebrow reveal">Industries we serve</span>
-            <h2 class="reveal" data-delay="1">Deep experience in the<br/>markets that matter to you.</h2>
+            <h2 class="reveal" data-delay="1">Playbooks that already work in your industry.</h2>
           </div>
-          <p class="reveal" data-delay="2">Every industry has its own buyers, rules and seasonality. We bring playbooks that have already worked for businesses like yours — so you skip the expensive learning curve.</p>
+          <p class="reveal" data-delay="2">Every market has its own buyers, rules and busy seasons. We bring what has already worked for similar businesses, so you skip the costly trial and error.</p>
         </div>
-        <div class="ind-grid">
-          <div class="flip reveal flip-up"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#d7192b"><svg><use href="#i-cart"/></svg></span><h3>E-commerce &amp; D2C</h3><small>Shopify, Amazon, marketplaces</small></div>
-            <div class="flipcard__face flipcard__back"><h3>E-commerce &amp; D2C</h3><p>Shopping ads, product feeds and retention emails that grow repeat orders and average basket size.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#2563eb"><svg><use href="#i-home"/></svg></span><h3>Real Estate</h3><small>Developers, brokers, rentals</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Real Estate</h3><p>Project launches, virtual tours and lead forms that bring site visits from serious, qualified buyers.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#16a34a"><svg><use href="#i-health"/></svg></span><h3>Healthcare</h3><small>Clinics, hospitals, wellness</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Healthcare</h3><p>Compliant local SEO and patient-acquisition campaigns that fill appointment calendars.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#9333ea"><svg><use href="#i-edu"/></svg></span><h3>Education</h3><small>Schools, ed-tech, coaching</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Education</h3><p>Admission-season campaigns, webinars and nurture flows that turn enquiries into enrolments.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#0891b2"><svg><use href="#i-cloud"/></svg></span><h3>SaaS &amp; Tech</h3><small>B2B software, startups</small></div>
-            <div class="flipcard__face flipcard__back"><h3>SaaS &amp; Tech</h3><p>LinkedIn ABM, comparison pages and trial-to-paid funnels that lower cost per demo.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="1"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#ea580c"><svg><use href="#i-plane"/></svg></span><h3>Travel &amp; Hospitality</h3><small>Hotels, tours, resorts</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Travel &amp; Hospitality</h3><p>Direct-booking campaigns and review management that cut dependence on travel portals.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="2"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#0f766e"><svg><use href="#i-bank"/></svg></span><h3>Finance &amp; Insurance</h3><small>NBFCs, fintech, advisors</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Finance &amp; Insurance</h3><p>Trust-first content and lead generation that meets strict advertising guidelines.</p></div>
-          </div></div>
-          <div class="flip reveal flip-up" data-delay="3"><div class="flipcard">
-            <div class="flipcard__face"><span class="ind-ic" style="--c:#db2777"><svg><use href="#i-food"/></svg></span><h3>Food &amp; Restaurants</h3><small>Cafés, QSR, cloud kitchens</small></div>
-            <div class="flipcard__face flipcard__back"><h3>Food &amp; Restaurants</h3><p>Local search, delivery-app visibility and Instagram content that keeps tables full.</p></div>
-          </div></div>
+        <div class="ind-cards">
+          <article class="ind reveal">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Person shopping online with a card and laptop" /><span class="ind__ic" style="--c:#1d4ed8"><svg><use href="#i-cart"/></svg></span></div>
+            <div class="ind__body"><h3>E-commerce &amp; D2C</h3><p>Shopping ads, product feeds and retention emails that grow repeat orders.</p><span class="ind__res">Typical result: 3–7x ROAS</span></div>
+          </article>
+          <article class="ind reveal" data-delay="1">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Modern residential house" /><span class="ind__ic" style="--c:#2563eb"><svg><use href="#i-home"/></svg></span></div>
+            <div class="ind__body"><h3>Real Estate</h3><p>Project launches, walkthrough reels and lead forms that bring serious site visits.</p><span class="ind__res">Typical result: 2–3x enquiries</span></div>
+          </article>
+          <article class="ind reveal" data-delay="2">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Doctor in a clinic" /><span class="ind__ic" style="--c:#16a34a"><svg><use href="#i-health"/></svg></span></div>
+            <div class="ind__body"><h3>Healthcare</h3><p>Local SEO and patient campaigns that fill appointment calendars, within ad rules.</p><span class="ind__res">Typical result: +60% bookings</span></div>
+          </article>
+          <article class="ind reveal" data-delay="3">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Teacher with students in a classroom" /><span class="ind__ic" style="--c:#9333ea"><svg><use href="#i-edu"/></svg></span></div>
+            <div class="ind__body"><h3>Education</h3><p>Admission campaigns, webinars and follow-ups that turn enquiries into enrolments.</p><span class="ind__res">Typical result: -40% cost per lead</span></div>
+          </article>
+          <article class="ind reveal">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1748256622734-92241ae7b43f?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Team working on computers in an office" /><span class="ind__ic" style="--c:#0891b2"><svg><use href="#i-cloud"/></svg></span></div>
+            <div class="ind__body"><h3>SaaS &amp; Technology</h3><p>LinkedIn ABM, comparison pages and trial funnels that lower cost per demo.</p><span class="ind__res">Typical result: 2x demo bookings</span></div>
+          </article>
+          <article class="ind reveal" data-delay="1">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Resort building with an infinity pool" /><span class="ind__ic" style="--c:#ea580c"><svg><use href="#i-plane"/></svg></span></div>
+            <div class="ind__body"><h3>Travel &amp; Hospitality</h3><p>Direct-booking campaigns and review management that cut portal commissions.</p><span class="ind__res">Typical result: +35% direct bookings</span></div>
+          </article>
+          <article class="ind reveal" data-delay="2">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1758519289013-9442fb2aeac6?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Two businessmen discussing charts on a laptop" /><span class="ind__ic" style="--c:#0f766e"><svg><use href="#i-bank"/></svg></span></div>
+            <div class="ind__body"><h3>Finance &amp; Insurance</h3><p>Trust-first content and lead generation that follows strict ad guidelines.</p><span class="ind__res">Typical result: 2x qualified leads</span></div>
+          </article>
+          <article class="ind reveal" data-delay="3">
+            <div class="ind__img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=700&amp;h=480&amp;q=80" width="700" height="480" loading="lazy" alt="Restaurant interior with tables" /><span class="ind__ic" style="--c:#db2777"><svg><use href="#i-food"/></svg></span></div>
+            <div class="ind__body"><h3>Food &amp; Restaurants</h3><p>Local search, delivery-app visibility and Instagram content that keeps tables full.</p><span class="ind__res">Typical result: +45% footfall</span></div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ================= TOOLS ================= -->
+    <!-- Brand logos: Simple Icons (CC0), shown to indicate tools we work with -->
     <section class="tools">
-      <div class="container tools__inner">
-        <div>
-          <span class="eyebrow reveal">Certified &amp; tool-fluent</span>
-          <h2 class="reveal" data-delay="1">Built on the stack you already trust.</h2>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Platforms &amp; tools</span>
+            <h2 class="reveal" data-delay="1">We work on the platforms you already use.</h2>
+          </div>
+          <p class="reveal" data-delay="2">Certified specialists on every major ad, analytics and website platform, so nothing needs to change on your side.</p>
         </div>
-        <div class="tools__grid">
-          <div class="tool reveal"><span style="--t:#4285F4">G</span>Google Ads</div>
-          <div class="tool reveal" data-delay="1"><span style="--t:#F9AB00">GA</span>Analytics 4</div>
-          <div class="tool reveal" data-delay="2"><span style="--t:#0866FF">M</span>Meta Ads</div>
-          <div class="tool reveal" data-delay="3"><span style="--t:#0A66C2">in</span>LinkedIn</div>
-          <div class="tool reveal"><span style="--t:#FF642D">Se</span>Semrush</div>
-          <div class="tool reveal" data-delay="1"><span style="--t:#FF8800">Ah</span>Ahrefs</div>
-          <div class="tool reveal" data-delay="2"><span style="--t:#95BF47">S</span>Shopify</div>
-          <div class="tool reveal" data-delay="3"><span style="--t:#FF7A59">Hs</span>HubSpot</div>
+        <div class="logo-grid">
+          <div class="lg reveal"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googleads.svg);--c:#4285F4"></span><b>Google Ads</b><small>Search, Shopping, YouTube</small></div>
+          <div class="lg reveal" data-delay="1"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googleanalytics.svg);--c:#E37400"></span><b>Google Analytics 4</b><small>Tracking &amp; reporting</small></div>
+          <div class="lg reveal" data-delay="2"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlesearchconsole.svg);--c:#458CF5"></span><b>Search Console</b><small>SEO health &amp; indexing</small></div>
+          <div class="lg reveal" data-delay="3"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/meta.svg);--c:#0467DF"></span><b>Meta Ads</b><small>Facebook &amp; Instagram</small></div>
+          <div class="lg reveal"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linkedin.svg);--c:#0A66C2"></span><b>LinkedIn Ads</b><small>B2B lead generation</small></div>
+          <div class="lg reveal" data-delay="1"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/shopify.svg);--c:#7AB55C"></span><b>Shopify</b><small>Stores &amp; product feeds</small></div>
+          <div class="lg reveal" data-delay="2"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/hubspot.svg);--c:#FF7A59"></span><b>HubSpot</b><small>CRM &amp; automation</small></div>
+          <div class="lg reveal" data-delay="3"><span class="lg__logo" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/semrush.svg);--c:#FF642D"></span><b>Semrush</b><small>Keyword &amp; competitor research</small></div>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= PACKAGES ================= -->
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow reveal">Packages</span>
+          <h2 class="reveal" data-delay="1">Clear pricing. No surprises.</h2>
+          <p class="reveal" data-delay="2">Starting prices for our most popular plans. Every plan includes a dedicated manager, monthly reporting and no lock-in after 90 days.</p>
+        </div>
+        <div class="pkg-grid">
+          <article class="pkg reveal flip-up">
+            <h3>SEO</h3><p class="pkg__for">Rank on Google, Bing &amp; AI search</p>
+            <div class="pkg__price"><small>from</small><b>₹15,000</b><span>/ month</span></div>
+            <ul><li>15–20 target keywords</li><li>Technical SEO fixes</li><li>4 SEO blog posts</li><li>Google Business Profile</li><li>AI search visibility basics</li></ul>
+            <a href="contact.html?plan=SEO" class="btn btn--ghost btn--block" data-plan="SEO">I'm interested</a>
+          </article>
+          <article class="pkg pkg--hot reveal flip-up" data-delay="1">
+            <span class="pkg__badge">Most popular</span>
+            <h3>Performance Ads</h3><p class="pkg__for">Leads from Google &amp; Meta</p>
+            <div class="pkg__price"><small>from</small><b>₹20,000</b><span>/ month + ad spend</span></div>
+            <ul><li>Google Search &amp; Meta campaigns</li><li>Ad creatives &amp; copy</li><li>Landing page optimisation</li><li>Weekly A/B testing</li><li>Conversion tracking setup</li></ul>
+            <a href="contact.html?plan=Performance%20Ads" class="btn btn--lime btn--block" data-plan="Performance Ads">I'm interested</a>
+          </article>
+          <article class="pkg reveal flip-up" data-delay="2">
+            <h3>Social Media</h3><p class="pkg__for">Grow an audience that buys</p>
+            <div class="pkg__price"><small>from</small><b>₹18,000</b><span>/ month</span></div>
+            <ul><li>12 posts + 4 reels / month</li><li>Content calendar</li><li>Profile optimisation</li><li>Community management</li><li>Monthly insights report</li></ul>
+            <a href="contact.html?plan=Social%20Media" class="btn btn--ghost btn--block" data-plan="Social Media">I'm interested</a>
+          </article>
+          <article class="pkg reveal flip-up" data-delay="3">
+            <h3>Complete Growth</h3><p class="pkg__for">SEO + Ads + Social together</p>
+            <div class="pkg__price"><small>from</small><b>₹45,000</b><span>/ month</span></div>
+            <ul><li>Everything in SEO, Ads &amp; Social</li><li>Email marketing</li><li>CRO &amp; analytics</li><li>Live growth dashboard</li><li>Quarterly strategy review</li></ul>
+            <a href="contact.html?plan=Complete%20Growth" class="btn btn--ghost btn--block" data-plan="Complete Growth">I'm interested</a>
+          </article>
+        </div>
+        <p class="pkg__note reveal">Prices are indicative and exclude GST. International clients: plans available in USD. <a href="contact.html" class="ulink">Need something custom?</a></p>
       </div>
     </section>
 
@@ -568,7 +786,7 @@
       <div class="container">
         <div class="reviews__top">
           <div>
-            <span class="eyebrow eyebrow--light reveal">04 — Client love</span>
+            <span class="eyebrow eyebrow--light reveal">Client love</span>
             <h2 class="reveal" data-delay="1">Don't take our word.<br/>Take theirs.</h2>
           </div>
           <div class="platforms reveal" data-delay="2">
@@ -583,7 +801,7 @@
             <figure class="review">
               <svg class="review__q"><use href="#i-quote"/></svg>
               <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <blockquote>"We'd burned through two agencies before Momentra. Within four months our organic revenue overtook paid for the first time ever. They genuinely act like part of our team."</blockquote>
+              <blockquote>"We'd burned through two agencies before NFS Digital. Within four months our organic revenue overtook paid for the first time ever. They genuinely act like part of our team."</blockquote>
               <figcaption><span class="av" style="--h:20">PN</span><div><b>Priya Nair</b><small>Head of Growth, Lumora</small></div><img src="assets/clients/lumora.svg" alt="" /></figcaption>
             </figure>
             <figure class="review">
@@ -607,7 +825,7 @@
             <figure class="review">
               <svg class="review__q"><use href="#i-quote"/></svg>
               <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-              <blockquote>"We've worked with Momentra for six years across three product launches. Consistent, responsive and always a step ahead of the algorithms."</blockquote>
+              <blockquote>"We've worked with NFS Digital for six years across three product launches. Consistent, responsive and always a step ahead of the algorithms."</blockquote>
               <figcaption><span class="av" style="--h:160">EB</span><div><b>Emeka Bello</b><small>CEO, Orbitly</small></div><img src="assets/clients/orbitly.svg" alt="" /></figcaption>
             </figure>
           </div>
@@ -668,9 +886,9 @@
     <section class="faq" id="faq">
       <div class="container faq__inner">
         <div>
-          <span class="eyebrow reveal">05 — Questions</span>
+          <span class="eyebrow reveal">Questions</span>
           <h2 class="reveal" data-delay="1">Good to know<br/>before we talk.</h2>
-          <p class="reveal" data-delay="2">Still curious? <a href="#contact" class="ulink">Send us a note</a> — a real strategist replies within 24 hours.</p>
+          <p class="reveal" data-delay="2">Still curious? <a href="contact.html" class="ulink">Send us a note</a> — a real strategist replies within 24 hours.</p>
         </div>
         <div class="accordion">
           <details class="reveal" open>
@@ -697,45 +915,31 @@
       </div>
     </section>
 
-    <!-- ================= CTA / CONTACT ================= -->
-    <section class="contact" id="contact">
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-cta" id="contact">
       <div class="container">
-        <div class="contact__card">
-          <div class="contact__glow" aria-hidden="true"></div>
-          <div class="contact__copy">
-            <span class="eyebrow eyebrow--light reveal">Free growth audit</span>
-            <h2 class="reveal" data-delay="1">Let's find the money you're leaving on the table.</h2>
-            <p class="reveal" data-delay="2">Tell us a little about your business. Within 48 hours you'll get a custom video audit with your top 5 growth opportunities — free, no strings.</p>
-            <ul class="contact__perks reveal" data-delay="3">
-              <li><svg><use href="#i-check"/></svg> Reply in under 24 hours</li>
-              <li><svg><use href="#i-check"/></svg> No lock-in contracts</li>
-              <li><svg><use href="#i-check"/></svg> NDA on request</li>
+        <div class="fcta">
+          <div class="fcta__img">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=80" width="900" height="700" loading="lazy" alt="Two people shaking hands across a desk" />
+            <div class="fcta__badge">
+              <svg viewBox="0 0 120 40" aria-hidden="true"><path d="M2 34 L22 30 L42 26 L62 20 L82 14 L102 8 L118 4" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><strong>+184%</strong><span>avg. lead growth in year one</span></div>
+            </div>
+          </div>
+          <div class="fcta__copy">
+            <span class="eyebrow eyebrow--light">Let's talk</span>
+            <h2>Ready for more leads? Start with a free audit.</h2>
+            <p>Share your website and goals. Within 48 hours you'll get a short video audit with the 5 changes that will bring you more enquiries.</p>
+            <div class="fcta__actions">
+              <a href="contact.html" class="btn btn--white btn--lg">Get my free audit <svg><use href="#i-arrow"/></svg></a>
+              <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="btn btn--outline-light btn--lg">WhatsApp us</a>
+            </div>
+            <ul class="fcta__trust">
+              <li><b>4.9★</b> 400+ reviews</li>
+              <li><b>&lt; 24h</b> reply time</li>
+              <li><b>No</b> lock-in contracts</li>
             </ul>
           </div>
-          <form class="form reveal" data-delay="2" novalidate>
-            <div class="form__row">
-              <label><span>Your name</span><input type="text" name="name" required placeholder="Jane Cooper" /></label>
-              <label><span>Work email</span><input type="email" name="email" required placeholder="jane@company.com" /></label>
-            </div>
-            <label><span>Website</span><input type="url" name="site" placeholder="https://company.com" /></label>
-            <fieldset>
-              <legend>I'm interested in</legend>
-              <div class="chips">
-                <label><input type="checkbox" name="svc" value="seo" checked /><span>SEO</span></label>
-                <label><input type="checkbox" name="svc" value="ppc" /><span>Paid ads</span></label>
-                <label><input type="checkbox" name="svc" value="social" /><span>Social</span></label>
-                <label><input type="checkbox" name="svc" value="content" /><span>Content</span></label>
-                <label><input type="checkbox" name="svc" value="web" /><span>Website</span></label>
-              </div>
-            </fieldset>
-            <label><span>Monthly budget</span>
-              <select name="budget">
-                <option>Under $2k</option><option selected>$2k – $5k</option><option>$5k – $15k</option><option>$15k+</option>
-              </select>
-            </label>
-            <button type="submit" class="btn btn--lime btn--lg btn--block">Get my free audit <svg><use href="#i-arrow"/></svg></button>
-            <p class="form__msg" role="status"></p>
-          </form>
         </div>
       </div>
     </section>
@@ -744,16 +948,18 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__big" aria-hidden="true">momentra<span>.</span></div>
+      <div class="footer__big" aria-hidden="true">NFS DIGITAL<span>.</span></div>
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#top" class="brand brand--light"><img src="assets/logo.svg" alt="" width="36" height="36" /><span>Momentra</span></a>
+          <a href="#top" class="brand brand--light"><img src="assets/logo.svg" alt="" width="36" height="36" /><span>NFS Digital</span></a>
           <p>Performance marketing studio for brands that want growth they can measure.</p>
           <div class="socials">
-            <a href="#" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
-            <a href="#" aria-label="X"><svg><use href="#i-x"/></svg></a>
-            <a href="#" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+            <a href="#" aria-label="NFS Digital on LinkedIn" style="--c:#0A66C2"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linkedin.svg)"></span></a>
+            <a href="#" aria-label="NFS Digital on Instagram" style="--c:#E4405F"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/instagram.svg)"></span></a>
+            <a href="#" aria-label="NFS Digital on Facebook" style="--c:#0866FF"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/facebook.svg)"></span></a>
+            <a href="#" aria-label="NFS Digital on X" style="--c:#000000"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/x.svg)"></span></a>
+            <a href="#" aria-label="NFS Digital on YouTube" style="--c:#FF0000"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/youtube.svg)"></span></a>
+            <a href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat with NFS Digital on WhatsApp" style="--c:#25D366"><span class="si" style="--logo:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/whatsapp.svg)"></span></a>
           </div>
         </div>
         <div>
@@ -762,22 +968,32 @@
         </div>
         <div>
           <h4>Company</h4>
-          <a href="#process">Process</a><a href="#work">Case studies</a><a href="#reviews">Reviews</a><a href="#">Careers</a>
+          <a href="#process">Process</a><a href="#work">Case studies</a><a href="#packages">Pricing</a>
+        <a href="#reviews">Reviews</a><a href="#">Careers</a>
         </div>
         <div>
           <h4>Contact</h4>
-          <a href="mailto:hello@momentra.example"><svg><use href="#i-mail"/></svg> hello@momentra.example</a>
-          <a href="tel:+10000000000"><svg><use href="#i-phone"/></svg> +1 (000) 000-0000</a>
+          <a href="mailto:hello@nfsdigital.example"><svg><use href="#i-mail"/></svg> hello@nfsdigital.example</a>
+          <a href="tel:+910000000000"><svg><use href="#i-phone"/></svg> +91 00000 00000</a>
           <span><svg><use href="#i-pin"/></svg> Remote-first · NYC · Delhi · Dubai</span>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span id="year">2026</span> Momentra Studio. All rights reserved.</span>
+        <span>© <span id="year">2026</span> NFS Digital. All rights reserved.</span>
         <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
         <a href="#top" class="to-top" aria-label="Back to top"><svg style="transform:rotate(-90deg)"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </footer>
+
+  <!-- ================= FLOATING CONTACT ================= -->
+  <div class="float-contact">
+    <a href="https://wa.me/910000000000?text=Hi%20NFS%20Digital%2C%20I%27d%20like%20a%20free%20audit" class="fc fc--wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.1-.1z"/></svg>
+      <span>WhatsApp us</span>
+    </a>
+    <a href="tel:+910000000000" class="fc fc--call" aria-label="Call NFS Digital"><svg><use href="#i-phone"/></svg><span>Call now</span></a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

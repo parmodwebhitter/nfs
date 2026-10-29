@@ -54,16 +54,32 @@
   });
 
   /* ---------- scroll reveal ---------- */
+  const revealEl = (el) => {
+    el.classList.add('in');
+    $$('[data-count]', el).forEach(runCounter);
+    if (el.matches('[data-count]')) runCounter(el);
+    io.unobserve(el);
+  };
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('in');
-      $$('[data-count]', e.target).forEach(runCounter);
-      if (e.target.matches('[data-count]')) runCounter(e.target);
-      io.unobserve(e.target);
+      // also reveal anything already scrolled past (fast scroll, anchor jumps)
+      if (e.isIntersecting || e.boundingClientRect.top < 0) revealEl(e.target);
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   $$('.reveal').forEach((el) => io.observe(el));
+
+  // safety net: anything whose top has entered the viewport gets revealed, even
+  // when it sits off to the side in a horizontal scroller or carousel
+  let pendingReveal = $$('.reveal');
+  const sweepReveals = () => {
+    if (!pendingReveal.length) return;
+    pendingReveal = pendingReveal.filter((el) => {
+      if (el.classList.contains('in')) return false;
+      const top = el.closest('.cases, .slider')?.getBoundingClientRect().top ?? el.getBoundingClientRect().top;
+      if (top < innerHeight * 0.92) { revealEl(el); return false; }
+      return true;
+    });
+  };
 
   /* ---------- rotating hero word ---------- */
   const words = $$('.rotator__word');
@@ -89,8 +105,10 @@
     hero.style.setProperty('--hs-dur', DUR + 'ms');
     let cur = 0, hsTimer;
     const show = (i) => {
+      const prev = cur;
       cur = (i + hsSlides.length) % hsSlides.length;
       hsSlides.forEach((s, j) => {
+        s.classList.toggle('is-leaving', j === prev && prev !== cur);
         s.classList.toggle('is-active', j === cur);
         s.setAttribute('aria-hidden', j !== cur);
         $$('a, button', s).forEach((el) => (el.tabIndex = j === cur ? 0 : -1));
@@ -99,9 +117,12 @@
         d.classList.remove('on');
         if (j === cur) { void d.offsetWidth; d.classList.add('on'); }
       });
-      count.textContent = String(cur + 1).padStart(2, '0');
+      if (count) count.textContent = String(cur + 1).padStart(2, '0');
     };
     const play = () => { clearInterval(hsTimer); if (!reduceMotion) hsTimer = setInterval(() => show(cur + 1), DUR); };
+    // stop rotating while the hero is off screen or the tab is in the background
+    new IntersectionObserver(([e]) => (e.isIntersecting ? play() : clearInterval(hsTimer))).observe(hero);
+    document.addEventListener('visibilitychange', () => (document.hidden ? clearInterval(hsTimer) : play()));
     dots.forEach((d, i) => d.addEventListener('click', () => { show(i); play(); }));
     $$('[data-hs]').forEach((b) => b.addEventListener('click', () => { show(cur + +b.dataset.hs); play(); }));
     hero.addEventListener('mouseenter', () => { clearInterval(hsTimer); hero.classList.add('hs-paused'); });
@@ -197,9 +218,13 @@
       const r = sec.getBoundingClientRect();
       a.classList.toggle('active', r.top < innerHeight * 0.4 && r.bottom > innerHeight * 0.4);
     });
+    sweepReveals();
     ticking = false;
   };
   addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+  // reveals also run straight from scroll, so content never stays hidden if frames are throttled
+  let lastSweep = 0;
+  addEventListener('scroll', () => { const now = Date.now(); if (now - lastSweep > 120) { lastSweep = now; sweepReveals(); } }, { passive: true });
   onScroll();
 
   /* ---------- mobile menu ---------- */
@@ -213,49 +238,24 @@
     burger.setAttribute('aria-expanded', 'false');
   }));
 
-  /* ---------- pointer effects (desktop only) ---------- */
-  if (finePointer && !reduceMotion) {
-    // magnetic buttons (none currently use this class)
-    $$('.magnetic').forEach((b) => {
-      b.addEventListener('mousemove', (e) => {
-        const r = b.getBoundingClientRect();
-        b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.25}px, ${(e.clientY - r.top - r.height / 2) * 0.35}px)`;
-      });
-      b.addEventListener('mouseleave', () => { b.style.transform = ''; });
-    });
-
-    // 3D tilt + spotlight
-    $$('.tilt').forEach((el) => {
-      const strength = el.classList.contains('dash') ? 8 : 5;
-      el.addEventListener('mousemove', (e) => {
-        const r = el.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-        el.style.transform = `perspective(1000px) rotateX(${(0.5 - py) * strength}deg) rotateY(${(px - 0.5) * strength}deg) translateY(-4px)`;
-        el.style.setProperty('--mx', px * 100 + '%');
-        el.style.setProperty('--my', py * 100 + '%');
-      });
-      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
-    });
-  }
+  /* ---------- flip cards no longer turn over: show the back's description on the front ---------- */
+  $$('.flip:not(.plan__grid .flip)').forEach((card) => {
+    const front = $('.flipcard__face:not(.flipcard__back)', card);
+    const detail = $('.flipcard__back p', card);
+    if (!front || !detail) return;
+    const p = document.createElement('p');
+    p.className = 'flip-detail';
+    p.textContent = detail.textContent;
+    front.appendChild(p);
+  });
 
   /* ---------- logo marquee: duplicate for seamless loop ---------- */
   const track = $('.marquee__track');
   if (track) track.innerHTML += track.innerHTML.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
 
-  /* ---------- case studies horizontal nav ---------- */
-  const cases = $('.cases');
-  $$('.work__nav .round-btn').forEach((b) => b.addEventListener('click', () => {
-    const card = $('.case', cases);
-    cases.scrollBy({ left: (card.offsetWidth + 22) * +b.dataset.dir, behavior: 'smooth' });
-  }));
-  // drag to scroll on desktop
-  let down = false, sx = 0, sl = 0;
-  cases.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') return; down = true; sx = e.clientX; sl = cases.scrollLeft; cases.style.scrollSnapType = 'none'; cases.style.cursor = 'grabbing'; });
-  addEventListener('pointerup', () => { if (!down) return; down = false; cases.style.scrollSnapType = ''; cases.style.cursor = ''; });
-  addEventListener('pointermove', (e) => { if (down) cases.scrollLeft = sl - (e.clientX - sx); });
-
   /* ---------- reviews slider ---------- */
   const slider = $('.slider');
+  if (slider) {
   const strack = $('.slider__track', slider);
   const slides = $$('.review', strack);
   const dotsWrap = $('.slider__dots', slider);
@@ -292,6 +292,7 @@
   let rz;
   addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { buildDots(); go(Math.min(idx, maxIdx())); }, 150); });
   buildDots(); go(0); restart();
+  }
 
   /* ---------- FAQ: one open at a time ---------- */
   const faqs = $$('.accordion details');
@@ -301,6 +302,7 @@
 
   /* ---------- contact form (front-end only) ---------- */
   const form = $('.form');
+  if (form) {
   const msg = $('.form__msg', form);
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -324,4 +326,41 @@
     }, 1200);
   });
   $$('input', form).forEach((f) => f.addEventListener('input', () => f.classList.remove('invalid')));
+
+  // contact page: pre-select services from ?plan= or ?service= in the link
+  const qs = new URLSearchParams(location.search);
+  const planServices = { 'SEO': ['seo'], 'Performance Ads': ['ppc'], 'Social Media': ['social'], 'Complete Growth': ['seo', 'ppc', 'social', 'content'] };
+  const serviceMap = { seo: ['seo'], ai: ['seo'], ppc: ['ppc'], social: ['social'], content: ['content'], web: ['web'], ecom: ['ppc', 'seo'], cro: ['web'], orm: ['seo'] };
+  const wanted = planServices[qs.get('plan')] || serviceMap[qs.get('service')];
+  if (wanted) $$('input[name="svc"]', form).forEach((c) => { c.checked = wanted.includes(c.value); });
+  const planNote = $('.form__plan', form);
+  if (planNote && qs.get('plan')) { planNote.hidden = false; planNote.querySelector('b').textContent = qs.get('plan'); }
+  }
+
+  /* ---------- quick audit forms (hero + mid-page band, front-end only) ---------- */
+  $$('.audit-form').forEach((af) => {
+    const out = $('.audit-form__msg', af);
+    af.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const site = af.elements.site, email = af.elements.email;
+      const siteOk = /^(https?:\/\/)?[\w-]+(\.[\w-]+)+/.test(site.value.trim());
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+      site.classList.toggle('invalid', !siteOk);
+      email.classList.toggle('invalid', !emailOk);
+      if (!siteOk || !emailOk) { out.className = 'audit-form__msg err'; out.textContent = 'Please enter your website and a valid email.'; return; }
+      const btn = $('button', af);
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.disabled = false;
+        out.className = 'audit-form__msg ok';
+        out.textContent = `Thanks! Your audit for ${site.value.trim().replace(/^https?:\/\//, '')} is on its way within 48 hours.`;
+        af.reset();
+      }, 900);
+    });
+    $$('input', af).forEach((f) => f.addEventListener('input', () => f.classList.remove('invalid')));
+  });
+
+  /* ---------- placeholder links (href="#") shouldn't throw the page back to the top ---------- */
+  $$('a[href="#"]').forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
+
 })();

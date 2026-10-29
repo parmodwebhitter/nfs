@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
   <!-- Web design: browser + mobile mockup, speed gauge -->
-  <defs><linearGradient id="wr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7192b"/><stop offset="1" stop-color="#7a0a15"/></linearGradient></defs>
-  <rect width="520" height="400" rx="32" fill="#fff4f5"/>
-  <rect x="30" y="44" width="360" height="260" rx="18" fill="#fff" stroke="#f1d6da" stroke-width="2"/>
+  <defs><linearGradient id="wr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#172f6e"/></linearGradient></defs>
+  <rect width="520" height="400" rx="32" fill="#f4f7ff"/>
+  <rect x="30" y="44" width="360" height="260" rx="18" fill="#fff" stroke="#d6e0f1" stroke-width="2"/>
   <rect x="30" y="44" width="360" height="34" rx="18" fill="#17171a"/>
   <rect x="30" y="62" width="360" height="16" fill="#17171a"/>
-  <circle cx="52" cy="61" r="5" fill="#ff4757"/><circle cx="68" cy="61" r="5" fill="#fff" opacity=".4"/><circle cx="84" cy="61" r="5" fill="#fff" opacity=".4"/>
+  <circle cx="52" cy="61" r="5" fill="#3b82f6"/><circle cx="68" cy="61" r="5" fill="#fff" opacity=".4"/><circle cx="84" cy="61" r="5" fill="#fff" opacity=".4"/>
   <rect x="110" y="54" width="200" height="14" rx="7" fill="#fff" opacity=".15"/>
   <rect x="52" y="98" width="150" height="16" rx="8" fill="#17171a"/>
-  <rect x="52" y="122" width="120" height="16" rx="8" fill="#d7192b"/>
-  <rect x="52" y="150" width="160" height="8" rx="4" fill="#e6d9db"/><rect x="52" y="164" width="140" height="8" rx="4" fill="#e6d9db"/>
+  <rect x="52" y="122" width="120" height="16" rx="8" fill="#1d4ed8"/>
+  <rect x="52" y="150" width="160" height="8" rx="4" fill="#d9dfe8"/><rect x="52" y="164" width="140" height="8" rx="4" fill="#d9dfe8"/>
   <rect x="52" y="186" width="90" height="28" rx="14" fill="url(#wr)"/>
-  <rect x="226" y="96" width="146" height="120" rx="14" fill="#ffe0e4"/>
+  <rect x="226" y="96" width="146" height="120" rx="14" fill="#dde8ff"/>
   <circle cx="300" cy="150" r="30" fill="url(#wr)"/><path d="M290 150l8 8 14-16" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <g fill="#fff4f5" stroke="#f1d6da" stroke-width="2"><rect x="52" y="236" width="98" height="50" rx="10"/><rect x="162" y="236" width="98" height="50" rx="10"/><rect x="272" y="236" width="100" height="50" rx="10"/></g>
+  <g fill="#f4f7ff" stroke="#d6e0f1" stroke-width="2"><rect x="52" y="236" width="98" height="50" rx="10"/><rect x="162" y="236" width="98" height="50" rx="10"/><rect x="272" y="236" width="100" height="50" rx="10"/></g>
   <!-- phone -->
   <rect x="360" y="140" width="120" height="226" rx="22" fill="#17171a"/>
   <rect x="370" y="156" width="100" height="196" rx="14" fill="#fff"/>
   <rect x="380" y="170" width="60" height="9" rx="4.5" fill="#17171a"/>
   <rect x="380" y="186" width="80" height="60" rx="8" fill="url(#wr)"/>
-  <rect x="380" y="256" width="70" height="7" rx="3.5" fill="#e6d9db"/><rect x="380" y="268" width="56" height="7" rx="3.5" fill="#e6d9db"/>
-  <rect x="380" y="288" width="80" height="22" rx="11" fill="#d7192b"/>
+  <rect x="380" y="256" width="70" height="7" rx="3.5" fill="#d9dfe8"/><rect x="380" y="268" width="56" height="7" rx="3.5" fill="#d9dfe8"/>
+  <rect x="380" y="288" width="80" height="22" rx="11" fill="#1d4ed8"/>
   <!-- speed gauge -->
   <g>
-    <circle cx="110" cy="345" r="40" fill="#fff" stroke="#f1d6da" stroke-width="2"/>
-    <path d="M80 355a32 32 0 1 1 60 0" stroke="#ffe0e4" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="110" cy="345" r="40" fill="#fff" stroke="#d6e0f1" stroke-width="2"/>
+    <path d="M80 355a32 32 0 1 1 60 0" stroke="#dde8ff" stroke-width="8" stroke-linecap="round"/>
     <path d="M80 355a32 32 0 0 1 56-24" stroke="#16a34a" stroke-width="8" stroke-linecap="round"/>
     <text x="96" y="358" font-family="Times New Roman, serif" font-size="18" font-weight="700" fill="#17171a">98</text>
   </g>

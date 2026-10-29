@@ -1,0 +1,50 @@
+/* ==========================================================
+   Alignment & UX polish   (loaded last)
+   ========================================================== */
+
+/* hero: every banner card fills the same height at every width */
+.hs__slide { display: grid; }
+
+/* consistent vertical rhythm for plain white sections */
+.problems, .about, .plan, .manifesto, .services, .features, .process,
+.work, .industries, .tools, .insights, .faq, .contact { padding-top: 80px; padding-bottom: 80px; }
+.features .feature:last-child { margin-bottom: 0; }
+.manifesto { padding-top: 60px; padding-bottom: 60px; }
+
+/* soft alternating tint so long runs of white sections separate clearly */
+.plan, .work, .faq { background: #f7f9ff; }
+.work .cases { padding-bottom: 10px; }
+
+/* section heads: same gap below every heading block */
+.section-head { margin-bottom: 48px; }
+
+/* decorative numbers readable but still quiet */
+.plan__grid .flipcard__face:first-child b,
+.step__num { color: #b4c4ea; }
+
+/* comfortable tap targets for inline links */
+.card__link, .post__more, .problem__fix { min-height: 40px; padding-block: 8px; }
+.ulink { padding-block: 6px; }
+
+/* card text blocks align to the same baseline inside rows */
+.problem h3, .pkg h3, .ind-grid h3 { min-height: 2.5em; display: flex; align-items: flex-end; }
+.pkg h3 { min-height: 0; }
+
+/* the hero form sits flush with the banner edges */
+.hero-audit { margin-top: 22px; }
+.hero-proof { justify-content: center; margin-top: 22px; }
+
+@media (max-width: 1100px) {
+  .problems, .about, .plan, .services, .features, .process,
+  .work, .industries, .tools, .insights, .faq, .contact { padding-top: 64px; padding-bottom: 64px; }
+}
+@media (max-width: 640px) {
+  .problems, .about, .plan, .services, .features, .process,
+  .work, .industries, .tools, .insights, .faq, .contact { padding-top: 56px; padding-bottom: 56px; }
+  .section-head { margin-bottom: 32px; }
+  .problem h3, .ind-grid h3 { min-height: 0; }
+}
+
+/* anchor jumps land below the fixed header instead of under it */
+html { scroll-padding-top: 96px; }
+@media (max-width: 640px) { html { scroll-padding-top: 84px; } }

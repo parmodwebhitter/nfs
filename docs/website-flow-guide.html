@@ -1,0 +1,159 @@
+<title>Agency Website Flow Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Layout: one reading column; a journey strip, then question-led tables and checklists */
+  :root {
+    --bg: #f7f9fd; --surface: #ffffff; --fg: #0f1a33; --muted: #5a6680; --line: #dbe2ef;
+    --accent: #1d4ed8; --accent-soft: #e6eeff; --warn: #b45309; --warn-soft: #fdf1df;
+    --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0c1220; --surface: #131b2e; --fg: #e8edf7; --muted: #98a3bb; --line: #26324c;
+    --accent: #7aa2ff; --accent-soft: #1b2a4d; --warn: #f0b061; --warn-soft: #3a2a12; color-scheme: dark; } }
+  :root[data-theme="dark"] {
+    --bg: #0c1220; --surface: #131b2e; --fg: #e8edf7; --muted: #98a3bb; --line: #26324c;
+    --accent: #7aa2ff; --accent-soft: #1b2a4d; --warn: #f0b061; --warn-soft: #3a2a12; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+  .wrap { max-width: 980px; margin: 0 auto; padding-block: 40px 80px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1, h2, h3 { line-height: 1.2; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.02rem; }
+  p { margin: 0; max-width: 68ch; }
+  .label { font: 500 .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .lede { font-size: 1.1rem; color: var(--muted); margin-top: 14px; }
+  section { margin-top: 56px; display: grid; gap: 16px; }
+  .muted { color: var(--muted); }
+
+  .journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; counter-reset: j; }
+  .stage { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 6px; align-content: start; position: relative; }
+  .stage .k { font: 500 .72rem var(--mono); color: var(--accent); }
+  .stage p { font-size: .92rem; color: var(--muted); }
+  .stage b { font-size: .9rem; }
+
+  .five { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .q { background: var(--accent-soft); border-radius: 12px; padding: 16px; display: grid; gap: 4px; }
+  .q h3 { color: var(--accent); }
+  .q p { font-size: .92rem; }
+
+  .tablebox { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); font-size: .94rem; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 500 .72rem var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  td:first-child { font: 500 .8rem var(--mono); color: var(--muted); white-space: nowrap; }
+  td.q2 { font-style: italic; }
+  tr:last-child td { border-bottom: 0; }
+
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 8px; align-content: start; }
+  .box ul, .box ol { margin: 0; padding-left: 18px; font-size: .94rem; }
+  .box li + li { margin-top: 3px; }
+  .box.warn { background: var(--warn-soft); border-color: transparent; }
+  .box.warn h3 { color: var(--warn); }
+
+  @media (max-width: 720px) { .journey { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 420px) { .journey { grid-template-columns: 1fr; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="label">NFS Digital · Reference guide</span>
+    <h1>How an agency website should flow</h1>
+    <p class="lede">What visitors look for, in what order, and what the best agency websites show them, so each section of our site earns its place.</p>
+  </header>
+
+  <section>
+    <span class="label">The visitor's journey</span>
+    <h2>Every visitor goes through four stages</h2>
+    <p class="muted">A good homepage is laid out in the same order a visitor thinks. If a section answers a question the visitor hasn't asked yet, it gets skipped.</p>
+    <div class="journey">
+      <div class="stage"><span class="k">1 · Attention</span><b>"Am I in the right place?"</b><p>Decided in the first few seconds, from the hero headline and the first screen.</p></div>
+      <div class="stage"><span class="k">2 · Interest</span><b>"Can they solve my problem?"</b><p>Problems we solve, services, and how we work.</p></div>
+      <div class="stage"><span class="k">3 · Trust</span><b>"Can I believe them?"</b><p>Results, case studies, reviews, logos, certifications, real people.</p></div>
+      <div class="stage"><span class="k">4 · Action</span><b>"What do I do now, and is it safe?"</b><p>Clear offer, short form, WhatsApp / call, and risk removers.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">The first screen</span>
+    <h2>Five questions the hero must answer</h2>
+    <p class="muted">Most visitors decide whether to stay before they scroll. The first screen should answer all five without any scrolling:</p>
+    <div class="five">
+      <div class="q"><h3>What do you do?</h3><p>One plain headline about the outcome, e.g. "More leads from Google, ads and social".</p></div>
+      <div class="q"><h3>Who is it for?</h3><p>Name the audience: growing businesses, D2C brands, local services…</p></div>
+      <div class="q"><h3>Why you?</h3><p>One differentiator: results, reporting, AI search, no lock-in.</p></div>
+      <div class="q"><h3>Can I trust you?</h3><p>A rating line and client logos visible straight away.</p></div>
+      <div class="q"><h3>What's next?</h3><p>One main button or a 2-field form: "Get my free audit".</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">How people actually read</span>
+    <h2>What visitors look at</h2>
+    <div class="cols">
+      <div class="box"><h3>They scan, they don't read</h3><ul><li>Eyes go to headings, numbers, buttons and images first</li><li>Short headings and bold figures get read; long paragraphs mostly don't</li><li>Each section should make sense from its heading alone</li></ul></div>
+      <div class="box"><h3>Most traffic is on mobile</h3><ul><li>Design the phone version first, then scale up</li><li>Tap targets at least 44px, text at least 16px</li><li>A sticky call / WhatsApp bar on phones</li></ul></div>
+      <div class="box"><h3>What they hunt for</h3><ul><li><b>Proof:</b> results, reviews, logos, case studies</li><li><b>Price:</b> at least a "starting from"</li><li><b>People:</b> a real team and office</li><li><b>Process:</b> what happens after they enquire</li><li><b>Contact:</b> phone, WhatsApp, form, address</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">Homepage flow</span>
+    <h2>Recommended order, and the question each section answers</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>#</th><th>Section</th><th>Visitor's question</th><th>Stage</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Header with phone and "Free audit" button</td><td class="q2">How do I contact them?</td><td>All</td></tr>
+          <tr><td>2</td><td>Hero: outcome headline + audit form + rating</td><td class="q2">Am I in the right place?</td><td>Attention</td></tr>
+          <tr><td>3</td><td>Client logos and review badges</td><td class="q2">Who else trusts them?</td><td>Trust</td></tr>
+          <tr><td>4</td><td>Problems we solve</td><td class="q2">Do they understand my problem?</td><td>Interest</td></tr>
+          <tr><td>5</td><td>Services</td><td class="q2">What exactly can they do for me?</td><td>Interest</td></tr>
+          <tr><td>6</td><td>Results: stats and case highlights</td><td class="q2">Have they done this before?</td><td>Trust</td></tr>
+          <tr><td>7</td><td>Why us + how we work (process)</td><td class="q2">Why them over others? What happens next?</td><td>Trust</td></tr>
+          <tr><td>8</td><td>Mid-page audit offer</td><td class="q2">I'm convinced; where do I start?</td><td>Action</td></tr>
+          <tr><td>9</td><td>Packages / starting prices</td><td class="q2">Can I afford this?</td><td>Action</td></tr>
+          <tr><td>10</td><td>Reviews and testimonials</td><td class="q2">What do real clients say?</td><td>Trust</td></tr>
+          <tr><td>11</td><td>Industries</td><td class="q2">Do they know my industry?</td><td>Interest</td></tr>
+          <tr><td>12</td><td>FAQ</td><td class="q2">What about contracts, timelines, budget?</td><td>Action</td></tr>
+          <tr><td>13</td><td>Blog / insights</td><td class="q2">Do they really know their field?</td><td>Trust</td></tr>
+          <tr><td>14</td><td>Final form + contact details + footer</td><td class="q2">How do I get in touch right now?</td><td>Action</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">The pattern repeats: interest, then proof, then a call to action. A visitor who is ready early should never have to scroll to the bottom to act.</p>
+  </section>
+
+  <section>
+    <span class="label">What strong agency sites show</span>
+    <h2>Common elements on high-converting agency websites</h2>
+    <div class="cols">
+      <div class="box"><h3>Trust builders</h3><ul><li>Google / Clutch star ratings with review counts</li><li>Recognisable client logos</li><li>Case studies with before and after numbers</li><li>Video testimonials</li><li>Partner badges (Google, Meta, Shopify)</li><li>Team photos and founder story</li></ul></div>
+      <div class="box"><h3>Conversion elements</h3><ul><li>Free audit or proposal as the main offer</li><li>Short forms (2–4 fields)</li><li>Sticky header button and mobile call bar</li><li>WhatsApp chat (very effective in India)</li><li>"No lock-in", "reply in 24 hours" beside forms</li><li>Starting-from pricing</li></ul></div>
+      <div class="box"><h3>SEO and AI-search elements</h3><ul><li>A separate page for each service</li><li>Location pages where relevant</li><li>FAQ sections with schema markup</li><li>Regular blog with useful guides</li><li>Fast loading and clean HTML</li><li>Consistent business details everywhere online</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">Inner pages</span>
+    <h2>How the other key pages should flow</h2>
+    <div class="cols">
+      <div class="box"><h3>Service page (e.g. SEO)</h3><ol><li>Hero: service outcome + form</li><li>Problems this service fixes</li><li>What's included (deliverables)</li><li>Process / timeline</li><li>Results for this service</li><li>Pricing / packages</li><li>FAQ for this service</li><li>Related services + final CTA</li></ol></div>
+      <div class="box"><h3>About page</h3><ol><li>Mission in one sentence</li><li>Story and years in business</li><li>Team with photos and roles</li><li>Values / how we work</li><li>Certifications and awards</li><li>Office photos and address</li><li>CTA: talk to the team</li></ol></div>
+      <div class="box"><h3>Case study page</h3><ol><li>Client, industry and headline result</li><li>The challenge</li><li>What we did</li><li>Results with numbers and charts</li><li>Client quote</li><li>CTA: get similar results</li></ol></div>
+      <div class="box"><h3>Contact page</h3><ol><li>Short form</li><li>Phone, WhatsApp, email</li><li>Office address and map</li><li>Working hours and response time</li><li>What happens after you submit</li></ol></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">Avoid</span>
+    <h2>Common mistakes that lose leads</h2>
+    <div class="cols">
+      <div class="box warn"><h3>Messaging</h3><ul><li>Vague headlines like "We are a creative agency"</li><li>Talking about the agency instead of the client's problem</li><li>Claims without numbers ("best", "top", "leading")</li></ul></div>
+      <div class="box warn"><h3>Design</h3><ul><li>Fast auto-rotating sliders that hide the main message</li><li>Too much motion, flipping and moving images</li><li>Low-contrast text and tiny buttons on mobile</li></ul></div>
+      <div class="box warn"><h3>Conversion</h3><ul><li>Long forms asking for budget, company size and more upfront</li><li>Only one contact option at the bottom of the page</li><li>No prices at all, so visitors leave to compare</li></ul></div>
+    </div>
+  </section>
+</div>
